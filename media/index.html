@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Olive Octagon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Olive Oct" />
+<link rel="manifest" href="../site.webmanifest" />
+<link rel="stylesheet" href="../w3pro.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
+body, html {height: 100%; line-height: 1.8;}
+.bgimg {min-height: 100%;}
+.w3-bar .w3-button {padding: 16px;}
+.w3-theme {color:#fff !important; background-color:#383 !important}
+.w3-theme-inverse {color:#383 !important; background-color:#fff !important}
+.w3-theme-dark {color:#fff !important; background-color:#242 !important}
+.w3-theme-white {color:#000 !important; background-color:#fff !important}
+.w3-theme-black {color:#fff !important; background-color:#000 !important}
+footer a {text-decoration:none;}
+footer a:hover {text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme-white w3-card" id="myNavbar" style="height: 60px;">
+    <a href="" class="w3-bar-item w3-button w3-xlarge" style="padding: 4px; font-family: 'Poiret One';">
+        <img src="../logo.svg" alt="Olive Octagon logo" height="52px"/>
+        <span class="w3-cell-middle">Olive Octagon</span>
+    </a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="height: 60px;">
+      <a href="https://apps.oliveoctagon.com/" class="w3-bar-item w3-button" style="height: 60px; border-right: 1px solid #224422; background-color: #338833; color: #ffffff;">APPS</a>
+      <a href="/dora/" class="w3-bar-item w3-button" style="height: 60px; border-right: 1px solid #224422;">DORA</a>
+      <a href="index.html#ethos" class="w3-bar-item w3-button" style="height: 60px;">ETHOS</a>
+      <a href="index.html#experience" class="w3-bar-item w3-button" style="height: 60px;">EXPERIENCE</a>
+      <a href="index.html#how-we-work" class="w3-bar-item w3-button" style="height: 60px;">HOW WE WORK</a>
+      <a href="index.html#contact" class="w3-bar-item w3-button" style="height: 60px;">CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-theme w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="https://apps.oliveoctagon.com/" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
+  <a href="/dora/" onclick="w3_close()" class="w3-bar-item w3-button">DORA</a>
+  <a href="index.html#ethos" onclick="w3_close()" class="w3-bar-item w3-button">ETHOS</a>
+  <a href="index.html#experience" onclick="w3_close()" class="w3-bar-item w3-button">EXPERIENCE</a>
+  <a href="index.html#how-we-work" onclick="w3_close()" class="w3-bar-item w3-button">HOW WE WORK</a>
+  <a href="index.html#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Hero Header -->
+<div class="w3-container" style="background-image:url('office-bg.jpg'); background-size:cover; background-position:center; height:300px;">
+  <h1 class="w3-center" style="color:white; padding-top:100px; font-size:3rem; margin:0;">MEDIA ROOM</h1>
+</div>
+
+<div class="w3-container" style="padding:32px" id="profile">
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m12 w3-large">
+      <p>Welcome to the Olive Octagon media room. Here you can find our latest press releases, news articles, and other media resources.</p>
+      <p>For questions, requests for comment, or any other general press enquiries, please contact our press team.</p>
+      <div class="w3-bar">
+        <button class="w3-btn w3-margin w3-large w3-theme" style="font-size:1rem;">Contact Press Team</button>
+        <button class="w3-btn w3-margin w3-large w3-theme" style="font-size:1rem;">View Latest Articles</button>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding" style="display:flex;flex-direction:column;align-items: center;">
+    <div class="w3-col l7 m12 w3-large">
+      <h2 style="margin:32px 0;">Media Contacts</h2>
+    </div>
+  </div>
+  <div class="w3-row-padding" style="margin:0 0 64px 0;display:flex;flex-direction:column;align-items: center;">
+    <div class="w3-col l6 m12 w3-large">
+      <div class="w3-card w3-white" style="border-radius:8px;padding:24px;">
+        <div style="display:flex; align-items:center; margin-bottom:16px; gap:16px">
+          <img src="ben.jpg" alt="Ben Joyce, Founder & CEO, Olive Octagon" class="w3-circle" style="width:100px; height:100px; object-fit:cover;">
+          <div>
+            <h2 style="margin:0;">Ben Joyce</h2>
+            <p style="font-style:italic; color:#555; margin:0">Founder and CEO, Olive Octagon</p>
+          </div>
+        </div>
+        <div>
+          <p>Ben has over 24 years of experience in software development, with a focus on actuarial and financial reporting systems.</p>
+          <p>He is passionate about using technology to improve productivity and performance in regulatory reporting and beyond.</p>
+          <p>As the founder of Olive Octagon, a provider of various software reporting solutions to the industry, he has become one of the UK's leading voices on regulation and compliance.</p>
+          <p>For a quote, comment or interview request, please contact <a href="">our press team</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark" style="padding: 60px;">
+  <div class="w3-row">
+      <div class="w3-quarter">
+          <img src="logo-white.svg" />
+      </div>
+      <div class="w3-quarter">
+          <p style="font-weight: bold;">Olive Octagon Limited</p>
+          <p>Insurance Offices, Hall Street<br />Long Melford<br />Sudbury<br />UNITED KINGDOM<br />CO10 9JB</p>
+          <p>Registered in England No. 16138803<br />LEI Code: 2138007R4RBJ4M21NL84</p>
+      </div>
+      <div class="w3-quarter">
+          <p style="font-weight: bold;">Engage With Us</p>
+          <p>
+              <a href="https://www.linkedin.com/company/oliveoctagon/">LinkedIn</a><br />
+              <a href="https://www.instagram.com/oliveoctagon/">Instagram</a><br />
+              <a href="https://www.facebook.com/oliveoctagon/">Facebook</a><br />
+              <a href="https://www.threads.net/@oliveoctagon">Threads</a><br />
+              <a href="https://bsky.app/profile/oliveoctagon.com">BlueSky</a><br />
+              <a href="https://x.com/oliveoctagon">X</a>
+          </p>
+          <p>
+            Media Room<br />
+          </p>
+      </div>
+      <div class="w3-quarter">
+          <p style="font-weight: bold;">Privacy Policy</p>
+          <p>We do not use cookies or collect any data when you use this site. Therefore we don't have any of your information to store, process or share with third parties. You can ask us to delete your data at any time if you really want to, but we won't know who you are because we don't store any of your data.</p>
+      </div>
+  </div>
+</footer>
+
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+// Animate the partner in text
+var partnerInTextSpan = document.getElementById("partner-in-text");
+var partnerInTextSmSpan = document.getElementById("partner-in-text-sm");
+var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
+var i = 1;
+setInterval(function() {
+    partnerInTextSpan.innerText = partnerInWords[i];
+    partnerInTextSmSpan.innerText = partnerInWords[i];
+    i = (i + 1) % partnerInWords.length;
+}, 1000);
+
+
+</script>
+
+</body>
+</html>
