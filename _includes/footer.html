@@ -1,0 +1,36 @@
+<footer class="w3-container w3-theme-dark" style="padding: 60px;">
+  <div class="w3-row">
+    <div class="w3-quarter">
+      <img src="{{ "/logo-white.svg" | relative_url }}" />
+    </div>
+    <div class="w3-quarter">
+      <p style="font-weight: bold;">Olive Octagon Limited</p>
+      <p>Insurance Offices, Hall Street<br />Long Melford<br />Sudbury<br />UNITED KINGDOM<br />CO10 9JB</p>
+      <p>Registered in England No. 16138803<br />LEI Code: 2138007R4RBJ4M21NL84</p>
+    </div>
+    <div class="w3-quarter">
+      <p style="font-weight: bold;">Engage With Us</p>
+      <p>
+        <a href="https://www.linkedin.com/company/oliveoctagon/">LinkedIn</a><br />
+        <a href="https://www.instagram.com/oliveoctagon/">Instagram</a><br />
+        <a href="https://www.facebook.com/oliveoctagon/">Facebook</a><br />
+        <a href="https://www.threads.net/@oliveoctagon">Threads</a><br />
+        <a href="https://bsky.app/profile/oliveoctagon.com">BlueSky</a><br />
+        <a href="https://x.com/oliveoctagon">X</a>
+      </p>
+      <p>
+        {% if page.url == "/media/" %}
+          Media Room
+        {% else %}
+          <a href="{{ "/media/" | relative_url }}">Media Room</a>
+        {% endif %}
+      </p>
+    </div>
+    <div class="w3-quarter">
+      <p style="font-weight: bold;">Privacy Policy</p>
+      <p>We do not use cookies or collect any data when you use this site. Therefore we don't have any of your
+        information to store, process or share with third parties. You can ask us to delete your data at any time if you
+        really want to, but we won't know who you are because we don't store any of your data.</p>
+    </div>
+  </div>
+</footer>
