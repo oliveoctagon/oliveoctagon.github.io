@@ -1,81 +1,15 @@
 ---
-layout: none
+layout: default
+title: Olive Octagon
 ---
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Olive Octagon</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="Olive Oct" />
-<link rel="manifest" href="/site.webmanifest" />
-<link rel="stylesheet" href="w3pro.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
-body, html {height: 100%; line-height: 1.8;}
-.bgimg {min-height: 100%;}
-.w3-bar .w3-button {padding: 16px;}
-.w3-theme {color:#fff !important; background-color:#383 !important}
-.w3-theme-inverse {color:#383 !important; background-color:#fff !important}
-.w3-theme-dark {color:#fff !important; background-color:#242 !important}
-.w3-theme-white {color:#000 !important; background-color:#fff !important}
-.w3-theme-black {color:#fff !important; background-color:#000 !important}
-footer a {text-decoration:none;}
-footer a:hover {text-decoration:underline;}
-</style>
-</head>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-theme-white w3-card" id="myNavbar" style="height: 60px;">
-    <a href="" class="w3-bar-item w3-button w3-xlarge" style="padding: 4px; font-family: 'Poiret One';">
-        <img src="logo.svg" alt="Olive Octagon logo" height="52px"/>
-        <span class="w3-cell-middle">Olive Octagon</span>
-    </a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small" style="height: 60px;">
-      <a href="https://apps.oliveoctagon.com/" class="w3-bar-item w3-button" style="height: 60px; border-right: 1px solid #224422; background-color: #338833; color: #ffffff;">APPS</a>
-      <a href="/dora/" class="w3-bar-item w3-button" style="height: 60px; border-right: 1px solid #224422;">DORA</a>
-      <a href="#ethos" class="w3-bar-item w3-button" style="height: 60px;">ETHOS</a>
-      <a href="#experience" class="w3-bar-item w3-button" style="height: 60px;">EXPERIENCE</a>
-      <a href="#how-we-work" class="w3-bar-item w3-button" style="height: 60px;">HOW WE WORK</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="height: 60px;">CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-theme w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="https://apps.oliveoctagon.com/" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
-  <a href="/dora/" onclick="w3_close()" class="w3-bar-item w3-button">DORA</a>
-  <a href="#ethos" onclick="w3_close()" class="w3-bar-item w3-button">ETHOS</a>
-  <a href="#experience" onclick="w3_close()" class="w3-bar-item w3-button">EXPERIENCE</a>
-  <a href="#how-we-work" onclick="w3_close()" class="w3-bar-item w3-button">HOW WE WORK</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
 
 <!-- Header with full-height image -->
 <header class="bgimg w3-display-container" id="home" >
     <div class="w3-display-topright w3-hide-small w3-hide-medium"style="padding-top: 140px; padding-right: 80px;">
-        <img src="logo.svg" height="360px"/>
+        <img src="{{ "/logo.svg" | relative_url }}" height="360px"/>
     </div>
     <div class="w3-display-topright w3-hide-large"style="padding-top: 80px; padding-right: 20px;">
-        <img src="logo.svg" height="120px"/>
+        <img src="{{ "/logo.svg" | relative_url }}" height="120px"/>
     </div>
 
   <div class="w3-display-left w3-text-white w3-hide-small" style="padding: 80px;">
@@ -189,102 +123,64 @@ footer a:hover {text-decoration:underline;}
 
 <!-- How We Work Section -->
 <div class="w3-container" style="padding:128px 16px" id="how-we-work">
-    <h2 class="w3-center">HOW WE WORK</h2>
-    <p class="w3-center w3-large">We have a flexible approach to helping you</p>
-    <div class="w3-row-padding w3-center" style="margin-top:64px">
-      <div class="w3-quarter">
-        <i class="fa fa-university w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
-        <p class="w3-xlarge">Consult</p>
-        <p class="w3-large">We coach your team</p>
-        <p>You have a good development team but you need a bit of direction or subject matter expertise in a particular area? We can help.</p>
-        <p>Our consulting service provides you with ad-hoc guidance where needed to get you started or keep you on track.</p>
-      </div>
-      <div class="w3-quarter">
-        <i class="fa fa-laptop w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
-        <p class="w3-xlarge">Contract</p>
-        <p class="w3-large">We help you build</p>
-        <p>Need a bit more help getting your project done? We're happy to roll up our sleeves and write code.</p>
-        <p>Our contractor service give you access to developer resource on a demand basis that suits you.</p>
-      </div>
-      <div class="w3-quarter">
-        <i class="fa fa-users w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
-        <p class="w3-xlarge">Collaborate</p>
-        <p class="w3-large">You help us build</p>
-        <p>If you need some software, don't have the capacity to build and/or maintain it yourself, but do have a good idea of the features you'd like, then why not help us to build it for you?</p>
-        <p>The software will end up becoming an Olive Octagon product that you licence, but as a thank you for helping us we will offer you a significant discount on the licence fee.</p>
+  <h2 class="w3-center">HOW WE WORK</h2>
+  <p class="w3-center w3-large">We have a flexible approach to helping you</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-university w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
+      <p class="w3-xlarge">Consult</p>
+      <p class="w3-large">We coach your team</p>
+      <p>You have a good development team but you need a bit of direction or subject matter expertise in a particular area? We can help.</p>
+      <p>Our consulting service provides you with ad-hoc guidance where needed to get you started or keep you on track.</p>
     </div>
-      <div class="w3-quarter">
-        <i class="fa fa-cart-plus w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
-        <p class="w3-xlarge">Delegate</p>
-        <p class="w3-large">You buy our products</p>
-        <p>Just want something off the shelf? That works!</p>
-        <p>There might be something amongst our growing suite of software that does just what you want.</p>
-        <p>Get in touch with us to find out what's cooking.</p>
-      </div>
+    <div class="w3-quarter">
+      <i class="fa fa-laptop w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
+      <p class="w3-xlarge">Contract</p>
+      <p class="w3-large">We help you build</p>
+      <p>Need a bit more help getting your project done? We're happy to roll up our sleeves and write code.</p>
+      <p>Our contractor service give you access to developer resource on a demand basis that suits you.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-users w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
+      <p class="w3-xlarge">Collaborate</p>
+      <p class="w3-large">You help us build</p>
+      <p>If you need some software, don't have the capacity to build and/or maintain it yourself, but do have a good idea of the features you'd like, then why not help us to build it for you?</p>
+      <p>The software will end up becoming an Olive Octagon product that you licence, but as a thank you for helping us we will offer you a significant discount on the licence fee.</p>
+  </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cart-plus w3-margin-bottom w3-jumbo w3-theme-inverse"></i>
+      <p class="w3-xlarge">Delegate</p>
+      <p class="w3-large">You buy our products</p>
+      <p>Just want something off the shelf? That works!</p>
+      <p>There might be something amongst our growing suite of software that does just what you want.</p>
+      <p>Get in touch with us to find out what's cooking.</p>
     </div>
   </div>
+</div>
 
-  <hr/>
+<hr/>
 
-  <!-- Contact Section -->
-  <div class="w3-container" style="padding:0px 16px 128px 16px" id="contact">
-      <h2 class="w3-center">CONTACT US</h2>
-      <p class="w3-center w3-large">Get in touch with us through one of our social media channels to find out how we can help you</p>
-      <div class="w3-row-padding w3-center" style="margin:64px 0">
-        <div class="w3-quarter">
-            <p>&nbsp;</p>
-        </div>
-        <div class="w3-half">
-            <div class="w3-row">
-                <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.linkedin.com/company/oliveoctagon/"><img src="linkedin.svg" alt="LinkedIn logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
-                <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.instagram.com/oliveoctagon/"><img src="instagram.svg" alt="Instagram logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
-                <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.facebook.com/oliveoctagon/"><img src="facebook.svg" alt="Facebook logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
-                <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.threads.net/@oliveoctagon"><img src="threads.svg" alt="Threads logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
-                <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://bsky.app/profile/oliveoctagon.com"><img src="bluesky.svg" alt="BlueSky logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
-                <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://x.com/oliveoctagon"><img src="x.svg" alt="X logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
-            </div>
-        </div>
-        <div class="w3-quarter">
-            <p>&nbsp;</p>
-        </div>
-      </div>
-      <p class="w3-center w3-large">For press and media enquiries, <a href="media.html">click here.</a></p>
+<!-- Contact Section -->
+<div class="w3-container" style="padding:0px 16px 128px 16px" id="contact">
+  <h2 class="w3-center">CONTACT US</h2>
+  <p class="w3-center w3-large">Get in touch with us through one of our social media channels to find out how we can help you</p>
+  <div class="w3-row-padding w3-center" style="margin:64px 0">
+    <div class="w3-quarter">
+        <p>&nbsp;</p>
     </div>
-
-<!-- Footer -->
-{% include footer.html %}
-
-<script>
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-
-// Animate the partner in text
-var partnerInTextSpan = document.getElementById("partner-in-text");
-var partnerInTextSmSpan = document.getElementById("partner-in-text-sm");
-var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
-var i = 1;
-setInterval(function() {
-    partnerInTextSpan.innerText = partnerInWords[i];
-    partnerInTextSmSpan.innerText = partnerInWords[i];
-    i = (i + 1) % partnerInWords.length;
-}, 1000);
-
-
-</script>
-
-</body>
-</html>
+    <div class="w3-half">
+        <div class="w3-row">
+            <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.linkedin.com/company/oliveoctagon/"><img src="linkedin.svg" alt="LinkedIn logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
+            <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.instagram.com/oliveoctagon/"><img src="instagram.svg" alt="Instagram logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
+            <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.facebook.com/oliveoctagon/"><img src="facebook.svg" alt="Facebook logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
+            <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://www.threads.net/@oliveoctagon"><img src="threads.svg" alt="Threads logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
+            <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://bsky.app/profile/oliveoctagon.com"><img src="bluesky.svg" alt="BlueSky logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
+            <div class="w3-col l2 m4 s4" style="padding: 10px;"><a href="https://x.com/oliveoctagon"><img src="x.svg" alt="X logo" class="w3-opacity w3-hover-opacity-off" height="48px" /></a></div>
+        </div>
+    </div>
+    <div class="w3-quarter">
+        <p>&nbsp;</p>
+    </div>
+  </div>
+  <p class="w3-center w3-large">For press and media enquiries, <a href="media.html">click here.</a></p>
+</div>
