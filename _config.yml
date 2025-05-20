@@ -53,3 +53,5 @@
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+permalink: /news/:title/

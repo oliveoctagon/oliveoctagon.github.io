@@ -26,6 +26,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
 html {height: 100%; line-height: 1.8;}
 .full-height {min-height: calc(100vh - 60px);}
 .news-image {aspect-ratio: 7 / 3; object-fit: cover; width:100%; border-top-left-radius:8px; border-top-right-radius:8px;}
+.post-content {font-size: 1.25rem; margin: 32px 0;}
+.post-content p { margin-bottom: 0.75rem; }
 .w3-bar .w3-button {padding: 16px;}
 .w3-theme {color:#fff !important; background-color:#383 !important}
 .w3-theme-inverse {color:#383 !important; background-color:#fff !important}
@@ -74,7 +76,46 @@ footer a:hover {text-decoration:underline;}
   <a href="{{ '/' | relative_url }}#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-{{ content }}
+<main>
+
+{% if page.collection == "posts" %}
+
+  <!-- Hero Header -->
+  <div class="w3-container" style="background-image:url('{{ '/news/news-bg.jpg' | relative_url }}'); background-size:cover; background-position:center; font-size:3rem; height:3em; display: flex; align-items:center; justify-content: center;">
+    <h1 class="w3-center" style="color:white; margin:0;">NEWS</h1>
+  </div>
+
+  <!-- Link back to the news page -->
+  <nav style="padding-top: 32px; max-width: 1200px; margin: auto;">
+    <a href="{{ '/news/' | relative_url }}" class="" style="margin-bottom: 16px;">&larr; Back to News</a>
+  </nav>
+
+  <article style="padding: 32px; max-width: 1200px; margin: auto;">
+    <header class="post-hero">
+      <h1 class="w3-xxxlarge">{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%A, %-d %B %Y" }}
+        </time>
+        {% if page.author %}&nbsp;&bull;&nbsp;By {{ page.author }}{% endif %}
+      </p>
+    </header>
+
+    {% if page.image %}
+      <div class="w3-content w3-padding-32" style="max-width: 1000px;">
+        <img src="{{ page.image }}" alt="Featured image for {{ page.title }}" class="news-image" style="width:100%; border-radius: 8px;">
+      </div>
+    {% endif %}
+    
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+{% else %}
+  {{ content }}
+{% endif %}
+
+</main>
 
 <!-- Footer -->
 {% include footer.html %}
