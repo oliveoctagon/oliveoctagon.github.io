@@ -23,8 +23,9 @@ layout: none
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
-body, html {height: 100%; line-height: 1.8;}
-.bgimg {min-height: 100%;}
+html {height: 100%; line-height: 1.8;}
+.full-height {min-height: calc(100vh - 60px);}
+.news-image {aspect-ratio: 7 / 3; object-fit: cover; width:100%; border-top-left-radius:8px; border-top-right-radius:8px;}
 .w3-bar .w3-button {padding: 16px;}
 .w3-theme {color:#fff !important; background-color:#383 !important}
 .w3-theme-inverse {color:#383 !important; background-color:#fff !important}
@@ -38,7 +39,7 @@ footer a:hover {text-decoration:underline;}
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top" style="position: sticky;">
   <div class="w3-bar w3-theme-white w3-card" id="myNavbar" style="height: 60px;">
     <a href="{{ '/' | relative_url }}" class="w3-bar-item w3-button w3-xlarge" style="padding: 4px; font-family: 'Poiret One';">
       <img src="{{ "/logo.svg" | relative_url }}" alt="Olive Octagon logo" height="52px"/>
