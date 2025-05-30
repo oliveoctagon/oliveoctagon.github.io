@@ -67,15 +67,14 @@ footer a:hover {text-decoration:underline;}
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <button href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+    <button href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()" aria-label="Open menu">
       <i class="fa fa-bars"></i>
     </button>
-  </div>
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-theme w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <button href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</button>
+  <button href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" aria-label="Close menu">Close ×</button>
   <a href="https://apps.oliveoctagon.com/" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
   <a href="{{ '/dora/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">DORA</a>
   <a href="{{ '/news/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
