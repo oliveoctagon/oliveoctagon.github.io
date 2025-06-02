@@ -3,6 +3,7 @@ title: "Deadline for reporting DORA Registers of Information is fast approaching
 date: 2025-02-14
 image: /assets/images/golden-padlock.jpg
 author: Olive Octagon
+description: Overview of the requirements for reporting DORA Register of Information data using XBRL-CSV, including required templates and package structure.
 ---
 
 The requirement to comply with the Digital Operational Resilience Act (DORA) came into effect on 17 January 2025, and the first reporting requirement is the Register of Information as at 31 March 2025 which is to be submitted to national regulators shortly thereafter.
