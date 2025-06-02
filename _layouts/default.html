@@ -146,19 +146,22 @@ function w3_open() {
 
 // Close the sidebar with the close button
 function w3_close() {
-    mySidebar.style.display = "none";
+  mySidebar.style.display = "none";
 }
 
 // Animate the partner in text
 var partnerInTextSpan = document.getElementById("partner-in-text");
 var partnerInTextSmSpan = document.getElementById("partner-in-text-sm");
-var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
-var i = 1;
-setInterval(function() {
+
+if (partnerInTextSpan && partnerInTextSmSpan) {
+  var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
+  var i = 1;
+  setInterval(function() {
     partnerInTextSpan.innerText = partnerInWords[i];
     partnerInTextSmSpan.innerText = partnerInWords[i];
     i = (i + 1) % partnerInWords.length;
-}, 1000);
+  }, 1000);
+}
 
 
 </script>
