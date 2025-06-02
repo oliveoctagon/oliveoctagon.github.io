@@ -4,6 +4,7 @@ date: 2025-04-22
 image: /assets/images/money-pounds.jpg
 author: Olive Octagon
 excerpt: A public working draft of the Bank of England Insurance Liquidity Reporting XBRL taxonomy is out now with feedback requested by 30 April.
+description: Information about the new PRA Liquidity Reporting requirement including frequency of data submissions and considerations for choosing XBRL software.
 ---
 
 ---
