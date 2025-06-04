@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<!-- Hero Header -->
+<div class="w3-container" style="background-image:url('{{ '/news/news-bg.jpg' | relative_url }}'); background-size:cover; background-position:center; font-size:3rem; height:3em; display: flex; align-items:center; justify-content: center;">
+<h1 class="w3-center" style="color:white; margin:0;">NEWS</h1>
+</div>
+
+<!-- Link back to the news page -->
+<nav style="padding: 32px 16px 0 16px; max-width: 1264px; margin: auto;">
+<a href="{{ '/news/' | relative_url }}" class="" style="margin-bottom: 16px;">&larr; Back to News</a>
+</nav>
+
+<article class="w3-content">
+<header class="post-hero">
+    <h1 class="w3-xxxlarge">{{ page.title }}</h1>
+    <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%A, %-d %B %Y" }}
+    </time>
+    {% if page.author %}&nbsp;&bull;&nbsp;By {{ page.author }}{% endif %}
+    </p>
+</header>
+
+{% if page.image %}
+    <div class="w3-padding-32 w3-auto" style="max-width: 1000px;">
+    <img src="{{ page.image }}" alt="Featured image for {{ page.title }}" class="news-image" style="width:100%; border-radius: 8px;">
+    </div>
+{% endif %}
+
+<div class="post-content">
+    {{ content }}
+</div>
+</article>

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "PRA Liquidity Reporting"
 date: 2025-04-22
 image: /assets/images/money-pounds.jpg

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Deadline for reporting DORA Registers of Information is fast approaching"
 date: 2025-02-14
 image: /assets/images/golden-padlock.jpg

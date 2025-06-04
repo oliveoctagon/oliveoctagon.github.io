@@ -27,7 +27,10 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
 html {height: 100%; line-height: 1.8;}
 .full-height {min-height: calc(100vh - 60px);}
-.news-image {aspect-ratio: 7 / 3; object-fit: cover; width:100%; border-top-left-radius:8px; border-top-right-radius:8px;}
+.news-image {aspect-ratio: 7 / 3; width: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; clip-path: inset(0px);}
+.w3-card:hover .news-image {transform: scale(1.1);}
+.image-container {width: 100%; position: relative;}
+.image-cropper {border-top-left-radius: 8px; border-top-right-radius: 8px; overflow: hidden;}
 .post-content {font-size: 1.25rem; margin: 32px 0;}
 .post-content p { margin-bottom: 0.75rem; }
 .post-content h2 {margin-top:2rem;}
@@ -89,42 +92,7 @@ footer a:hover {text-decoration:underline;}
 
 <main>
 
-{% if page.collection == "posts" %}
-
-  <!-- Hero Header -->
-  <div class="w3-container" style="background-image:url('{{ '/news/news-bg.jpg' | relative_url }}'); background-size:cover; background-position:center; font-size:3rem; height:3em; display: flex; align-items:center; justify-content: center;">
-    <h1 class="w3-center" style="color:white; margin:0;">NEWS</h1>
-  </div>
-
-  <!-- Link back to the news page -->
-  <nav style="padding: 32px 16px 0 16px; max-width: 1264px; margin: auto;">
-    <a href="{{ '/news/' | relative_url }}" class="" style="margin-bottom: 16px;">&larr; Back to News</a>
-  </nav>
-
-  <article class="w3-content">
-    <header class="post-hero">
-      <h1 class="w3-xxxlarge">{{ page.title }}</h1>
-      <p class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-          {{ page.date | date: "%A, %-d %B %Y" }}
-        </time>
-        {% if page.author %}&nbsp;&bull;&nbsp;By {{ page.author }}{% endif %}
-      </p>
-    </header>
-
-    {% if page.image %}
-      <div class="w3-padding-32 w3-auto" style="max-width: 1000px;">
-        <img src="{{ page.image }}" alt="Featured image for {{ page.title }}" class="news-image" style="width:100%; border-radius: 8px;">
-      </div>
-    {% endif %}
-    
-    <div class="post-content">
-      {{ content }}
-    </div>
-  </article>
-{% else %}
   {{ content }}
-{% endif %}
 
 </main>
 
