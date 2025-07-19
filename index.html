@@ -4,43 +4,45 @@ title: Olive Octagon
 description: Olive Octagon home page describing the company's products, services, history and ethos.
 ---
 
-<!-- Header with full-height image -->
-<header class="full-height w3-display-container" id="home" >
-    <div class="w3-display-topright w3-hide-small w3-hide-medium"style="padding-top: 140px; padding-right: 80px;">
-        <img src="{{ '/logo.svg' | relative_url }}" height="360" width="360" alt="Olive Octagon logo"/>
-    </div>
-    <div class="w3-display-topright w3-hide-large"style="padding-top: 80px; padding-right: 20px;">
-        <img src="{{ '/logo.svg' | relative_url }}" height="120" width="120" alt="Olive Octagon logo"/>
-    </div>
-
-  <div class="w3-display-left w3-text-white w3-hide-small" style="padding: 80px;">
+<!-- Header on desktop -->
+<header class="full-height w3-hide-small" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr auto; grid-template-areas: 'headline logo' 'bottom bottom'; padding: 4rem 5rem;">
+  <div style="grid-area: headline;display: flex;flex-direction: column;justify-content: center;">
     <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" height="64px" width="417px" style="margin-top: 4px; margin-left: 2px;"/>
     <h2>&nbsp;<span class="w3-theme-inverse">&mdash;</span>&nbsp;Business Software</h2><br />
-    <span class="w3-xxlarge">Your partner in </span><span class="w3-xxlarge w3-theme-inverse w3-hide-small" id="partner-in-text" style="font-weight: 900;">...</span>
-  </div>
-  <div class="w3-display-bottomleft w3-text-grey w3-xlarge w3-hide-small" style="padding:60px 80px">
-    <span><a href="https://www.linkedin.com/company/oliveoctagon/"><img src="linkedin.svg" alt="LinkedIn logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a></span>
-    <span style="margin-left: 20px;"><a href="https://www.instagram.com/oliveoctagon/"><img src="instagram.svg" alt="Instagram logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a></span>
-    <span style="margin-left: 20px;"><a href="https://www.facebook.com/oliveoctagon/"><img src="facebook.svg" alt="Facebook logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a></span>
-    <span style="margin-left: 20px;"><a href="https://www.threads.net/@oliveoctagon"><img src="threads.svg" alt="Threads logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a></span>
-    <span style="margin-left: 20px;"><a href="https://bsky.app/profile/oliveoctagon.com"><img src="bluesky.svg" alt="BlueSky logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="41px" /></a></span>
-    <span style="margin-left: 20px;"><a href="https://x.com/oliveoctagon"><img src="x.svg" alt="X logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="40px" /></a></span>
+    <div><span class="w3-xxlarge">Your partner in </span><span class="w3-xxlarge w3-theme-inverse" id="partner-in-text" style="font-weight: 900;">...</span></div>
   </div>
 
-  <div class="w3-display-left w3-text-white w3-hide-large w3-hide-medium" style="padding: 40px;">
+  <div style="grid-area: logo;display: flex;flex-direction: column;justify-content: center;align-items:center;margin-bottom:25%">
+    <img src="{{ '/logo.svg' | relative_url }}" height="360" width="360" alt="Olive Octagon logo"/>
+  </div>
+
+  <div style="grid-area: bottom;display:flex;column-gap:1.75rem;">
+    <a href="https://www.linkedin.com/company/oliveoctagon/"><img src="linkedin.svg" alt="LinkedIn logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a>
+    <a href="https://www.instagram.com/oliveoctagon/"><img src="instagram.svg" alt="Instagram logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a>
+    <a href="https://www.facebook.com/oliveoctagon/"><img src="facebook.svg" alt="Facebook logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a>
+    <a href="https://www.threads.net/@oliveoctagon"><img src="threads.svg" alt="Threads logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="36px" /></a>
+    <a href="https://bsky.app/profile/oliveoctagon.com"><img src="bluesky.svg" alt="BlueSky logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="41px" /></a>
+    <a href="https://x.com/oliveoctagon"><img src="x.svg" alt="X logo" class="w3-opacity w3-hover-opacity-off" height="36px" width="40px" /></a>
+  </div>
+</header>
+
+<!-- Header on mobile -->
+<header class="full-height w3-hide-large w3-hide-medium" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr auto; grid-template-areas: 'headline' 'bottom'; padding: 3rem 2rem;">
+  <div style="grid-area: headline;display: flex;flex-direction: column;justify-content: center;">
+    <img src="{{ '/logo.svg' | relative_url }}" height="120" width="120" alt="Olive Octagon logo" style="margin-top: -6rem; margin-bottom: 2rem;" />
     <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" height="40px" width="261px" style="margin-top: 4px; margin-left: 2px;"/>
-    <h3>&nbsp;<span class="w3-theme-inverse">&mdash;</span>&nbsp;Business Software</h3>
-    <span class="w3-xlarge"><br />Your partner in <br /></span><span class="w3-xlarge w3-theme-inverse w3-hide-large w3-hide-medium" id="partner-in-text-sm" style="font-weight: 900;">...</span>
-  </div> 
-  <div class="w3-display-bottomleft w3-text-grey w3-xlarge w3-hide-large w3-hide-medium" style="padding:60px 40px">
-    <span><a href="https://www.linkedin.com/company/oliveoctagon/"><img src="linkedin.svg" alt="LinkedIn logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a></span>
-    <span style="margin-left: 12px;"><a href="https://www.instagram.com/oliveoctagon/"><img src="instagram.svg" alt="Instagram logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a></span>
-    <span style="margin-left: 12px;"><a href="https://www.facebook.com/oliveoctagon/"><img src="facebook.svg" alt="Facebook logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a></span>
-    <span style="margin-left: 12px;"><a href="https://www.threads.net/@oliveoctagon"><img src="threads.svg" alt="Threads logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a></span>
-    <span style="margin-left: 12px;"><a href="https://bsky.app/profile/oliveoctagon.com"><img src="bluesky.svg" alt="BlueSky logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="34px" /></a></span>
-    <span style="margin-left: 12px;"><a href="https://x.com/oliveoctagon"><img src="x.svg" alt="X logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="33px" /></a></span>
+    <h3>&nbsp;<span class="w3-theme-inverse">&mdash;</span>&nbsp;Business Software</h3><br />
+    <span class="w3-xlarge">Your partner in </span><span class="w3-xlarge w3-theme-inverse" id="partner-in-text-sm" style="font-weight: 900;">...</span>
   </div>
 
+  <div style="grid-area: bottom;display:flex;column-gap:1.75rem;">
+    <a href="https://www.linkedin.com/company/oliveoctagon/"><img src="linkedin.svg" alt="LinkedIn logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a>
+    <a href="https://www.instagram.com/oliveoctagon/"><img src="instagram.svg" alt="Instagram logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a>
+    <a href="https://www.facebook.com/oliveoctagon/"><img src="facebook.svg" alt="Facebook logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a>
+    <a href="https://www.threads.net/@oliveoctagon"><img src="threads.svg" alt="Threads logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="30px" /></a>
+    <a href="https://bsky.app/profile/oliveoctagon.com"><img src="bluesky.svg" alt="BlueSky logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="34px" /></a>
+    <a href="https://x.com/oliveoctagon"><img src="x.svg" alt="X logo" class="w3-opacity w3-hover-opacity-off" height="30px" width="33px" /></a>
+  </div>
 </header>
 
 <hr class="w3-theme-inverse"/>
