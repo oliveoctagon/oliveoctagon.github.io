@@ -3,7 +3,7 @@ layout: post
 title: "Deadline for reporting DORA Registers of Information is fast approaching"
 date: 2025-02-14
 image: /assets/images/golden-padlock.jpg
-author: Olive Octagon
+author: Ben Joyce FIA
 description: Overview of the requirements for reporting DORA Register of Information data using XBRL-CSV, including required templates and package structure.
 ---
 
