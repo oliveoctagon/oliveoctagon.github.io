@@ -95,6 +95,15 @@ footer a:hover {text-decoration:underline;}
 
   {{ content }}
 
+  {% if page.url == "/contact/" %}
+    {% include contact-form.html %}
+  {% elsif page.url == "/contact/sent/" %}
+
+  {% else %}
+    <hr />
+    {% include contact-form.html %}
+  {% endif %}
+
 </main>
 
 <!-- Footer -->

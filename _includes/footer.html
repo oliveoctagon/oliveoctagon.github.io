@@ -17,15 +17,23 @@
         {% if page.url == "/media/" %}
           Media Room
         {% else %}
-          <a href="{{ '/media/'' | relative_url }}">Media Room</a>
+          <a href="{{ '/media/' | relative_url }}">Media Room</a>
+        {% endif %}
+      </p>
+      <p>
+        {% if page.url == "/contact/" %}
+          Contact Us
+        {% else %}
+          <a href="{{ '/contact/' | relative_url }}">Contact Us</a>
         {% endif %}
       </p>
     </div>
     <div>
       <p style="font-weight: bold;">Privacy Policy</p>
       <p>We do not use cookies or collect any data when you use this site. Therefore we don't have any of your
-        information to store, process or share with third parties. You can ask us to delete your data at any time if you
-        really want to, but we won't know who you are because we don't store any of your data.</p>
+        information to store, process or share with third parties.</p>
+      <p>If you contact us through our contact form then you grant us permission to process your data for the purposes of
+        replying to you. After we have contacted you, you can reply via email requesting us to delete your data.</p>
     </div>
   </div>
 </footer>
