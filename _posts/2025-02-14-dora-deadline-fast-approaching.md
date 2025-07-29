@@ -13,7 +13,7 @@ DORA is a European Union regulation designed to enhance the digital operational 
 
 Some more information on DORA is available at the end of this article, but we're here primarily to talk about Register of Information reporting.
 
-> If you know what the DORA Register of Information is all about and just need some software to help you then you can go straight to [https://www.oliveoctagon.com/dora/](https://www.oliveoctagon.com/dora/).
+> If you know what the DORA Register of Information is all about and just need some software to help you then you can go straight to [https://www.oliveoctagon.com/products/dora/](https://www.oliveoctagon.com/products/dora/).
 
 ## Reporting overview
 
@@ -111,7 +111,7 @@ Our development team has been building software for businesses and regulatory re
 
 Don't be. Our web application runs entirely within your browser, so no data leaves your computer during validation or conversion.
 
-For more information, visit [https://www.oliveoctagon.com/dora/](https://www.oliveoctagon.com/dora/)
+For more information, visit [https://www.oliveoctagon.com/products/dora/](https://www.oliveoctagon.com/products/dora/)
 
 ## More information on DORA
 
