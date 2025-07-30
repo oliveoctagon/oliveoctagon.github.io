@@ -44,9 +44,9 @@ The Bank of England is requesting feedback on the draft taxonomy by 30 April 202
 
 Follow the Olive Octagon company page to keep up to date with developments.
 
-## Get your reporting solution here!
+## Get your reporting solution [here](/products/pra-liquidity/)!
 
-At Olive Octagon we have implemented the PWD taxonomy for any companies wishing to test the XBRL conversion part of their Liquidity Reporting workflow. If this is of interest to you, please get in touch with us to discuss or arrange a demonstration of our solution. Equally, if you'd just like to have a call to learn more about the Liquidity Reporting requirements then we'd be happy to do this (and indeed have already done so for some).
+At Olive Octagon we have implemented the PWD taxonomy for any companies wishing to test the XBRL conversion part of their Liquidity Reporting workflow. If this is of interest to you, please take a look at our [PRA Liquidity Reporting tool](/products/pra-liquidity/) or get in touch with us to discuss or arrange a demonstration of our solution. Equally, if you'd just like to have a call to learn more about the Liquidity Reporting requirements then we'd be happy to do this (and indeed have already done so for some).
 
 ---
 
