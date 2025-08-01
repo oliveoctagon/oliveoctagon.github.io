@@ -9,5 +9,5 @@ description: Information about the new Insurance Recovery and Resolution Directi
 ---
 
 <div class="w3-content w3-center w3-panel w3-theme">
-    <h3>This article is due for publication on 30 July 2025.</h3>
+    <h3>This article is due for publication on 4 August 2025.</h3>
 </div>
