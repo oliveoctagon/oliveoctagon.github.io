@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-50: oklch(95.08% 0.059 145.06);
+  --color-brand-100: oklch(89.81% 0.141 144.28);
+  --color-brand-200: oklch(80.87% 0.184 143.63);
+  --color-brand-300: oklch(72.5% 0.174 143.52);
+  --color-brand-400: oklch(64.02% 0.161 143.41);
+  --color-brand-500: oklch(55.59% 0.147 143.29);
+  --color-brand-600: oklch(48.91% 0.121 143.44);
+  --color-brand-700: oklch(42.14% 0.101 143.53);
+  --color-brand-800: oklch(35.41% 0.08 143.64);
+  --color-brand-900: oklch(28.59% 0.062 143.74);
+  --color-brand-950: oklch(25.48% 0.051 143.89);
+
+  --color-brand: oklch(55.588% 0.1465 143.29);
+  
+  --color-brand-green: #383;
+  --color-brand-dark: #252;
+  --default-font-family: "Gabarito", var(--font-sans);
+}
+
+@font-face {
+  font-family: 'Gabarito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/gabarito/v7/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj248KEEQgqiaPVIzHL.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@layer base {
+  html {
+    height: 100%;
+  }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

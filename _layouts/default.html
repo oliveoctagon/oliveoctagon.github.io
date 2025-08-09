@@ -12,9 +12,7 @@
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
     <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="{{ '/assets/css/w3pro.css' | relative_url }}">
     <link rel="canonical" href="https://www.oliveoctagon.com{{ page.url }}" />
-
     <meta property="og:site_name" content="Olive Octagon" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:url" content="https://www.oliveoctagon.com{{ page.url }}" />
@@ -25,77 +23,81 @@
     <meta property="og:image:width" content="1279" />
     <meta property="og:image:height" content="720" />
     {% if page.ogimagealt %}<meta property="og:image:alt" content="{{ page.ogimagealt }}" />{% else %}{% if page.ogimage %}{% else %}<meta property="og:image:alt" content="Olive Octagon logo and some olive branches" />{% endif %}{% endif %}
-
-    <style>
-      @font-face {
-        font-family: 'Gabarito';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(https://fonts.gstatic.com/s/gabarito/v7/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj248KEEQgqiaPVIzHL.woff) format('woff');
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-      }
-      body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
-      html {height: 100%; line-height: 1.8;}
-      .full-height {min-height: calc(100vh - 60px);}
-      .news-image {aspect-ratio: 7 / 3; width: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; clip-path: inset(0px);}
-      .w3-card:hover .news-image {transform: scale(1.1);}
-      .image-container {width: 100%; position: relative;}
-      .image-cropper {border-top-left-radius: 8px; border-top-right-radius: 8px; overflow: hidden;}
-      .post-content {font-size: 1.25rem; margin: 32px 0;}
-      .post-content p { margin-bottom: 0.75rem; }
-      .post-content h2 {margin-top:2rem;}
-      .post-content hr {margin:2rem 0;}
-      .card-content {display:flex; flex-direction: column; height:100%}
-      .w3-bar .w3-button {padding: 16px;}
-      .w3-theme {color:#fff !important; background-color:#383 !important}
-      .w3-theme-inverse {color:#383 !important; background-color:#fff !important}
-      .w3-theme-dark {color:#fff !important; background-color:#252 !important}
-      .w3-theme-white {color:#000 !important; background-color:#fff !important}
-      .w3-theme-black {color:#fff !important; background-color:#000 !important}
-      .w3-content {max-width:1232px;margin:64px auto; padding: 0 16px;}
-      footer { padding: 60px; }
-      footer a {text-decoration:none;}
-      footer a:hover {text-decoration:underline;}
-      @media (max-width: 600px) { 
-        .w3-content { margin-top: 2rem !important; margin-bottom: 2rem !important; }
-        footer { padding: 1.25rem 2rem; }
-      }
-    </style>
+    <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/tw.min.css' | relative_url }}">
+    {% if page.faq and page.faq.questions and page.faq.questions.size > 0 %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for faq in page.faq.questions %}
+        {
+          "@type": "Question",
+          "name": "{{ faq.question | escape }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ faq.answer | escape | strip_html }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    </script>
+    {% endif %}
   </head>
-  <body style="height: 100%;">
+  <body class="font-gabarito text-gray-800 bg-white" style="height: 100%;">
 
   <div style="display: flex; flex-direction: column; min-height: 100%;">
 
-  <!-- Navbar (sit on top) -->
-  <div style="position: sticky;top: 0;z-index:1;background-color:#fff;">
-    <div class="w3-bar w3-card" id="myNavbar" style="height: 60px;">
-      <a href="{{ '/' | relative_url }}" class="w3-bar-item w3-button w3-xlarge" style="padding: 4px;">
-        <img src="{{ '/logo.svg' | relative_url }}" alt="Olive Octagon logo" height="52px" width="52px"/>
-        <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" height="26px" width="169px" style="margin-top: 4px; margin-left: 2px;"/>
-      </a>
-      <!-- Right-sided navbar links -->
-      <div class="w3-right w3-hide-small" style="height: 60px;">
-        <a href="{{ '/news/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">NEWS</a>
-        <a href="{{ '/products/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">PRODUCTS</a>
-        <a href="{{ '/contact/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">CONTACT</a>
-        <a href="https://apps.oliveoctagon.com/" class="w3-bar-item w3-button" style="height: 60px; background-color: #225522; color: #ffffff;">APPS</a>
+  <!-- Header from index.html -->
+  <header class="border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="flex justify-between items-center">
+        <a href="{{ '/' | relative_url }}" class="flex items-center space-x-2">
+          <img src="{{ '/logo.svg' | relative_url }}" alt="Olive Octagon logo" class="h-10 w-10"/>
+          <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" class="h-6" style="width: 169px;"/>
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="{{ '/news/' | relative_url }}" class="text-gray-600 py-2 hover:text-brand-green transition-colors">News</a>
+          <a href="{{ '/products/' | relative_url }}" class="text-gray-600 py-2 hover:text-brand-green transition-colors">Products</a>
+          <a href="{{ '/contact/' | relative_url }}" class="text-gray-600 py-2 hover:text-brand-green transition-colors">Contact</a>
+          <a href="https://apps.oliveoctagon.com" class="bg-brand-green text-white px-4 py-2 hover:bg-brand-dark transition-colors">Client Area</a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button class="md:hidden text-gray-600 hover:text-brand-green" onclick="toggleMobileMenu()" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
-      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-      <button href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="color: #225522;" onclick="w3_open()" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="28" fill="currentColor"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-      </button>
     </div>
-  </div>
+  </header>
 
-  <!-- Sidebar on small screens when clicking the menu icon -->
-  <nav class="w3-sidebar w3-bar-block w3-theme w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-    <button href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" aria-label="Close menu">Close ×</button>
-    <a href="{{ '/news/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
-    <a href="{{ '/products/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">PRODUCTS</a>
-    <a href="{{ '/contact/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-    <a href="https://apps.oliveoctagon.com/" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
+  <!-- Mobile menu overlay -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" onclick="toggleMobileMenu()"></div>
+
+  <!-- Mobile menu sidebar -->
+  <nav id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-8">
+        <div class="flex items-center space-x-2">
+          <img src="{{ '/logo.svg' | relative_url }}" alt="Olive Octagon logo" class="h-8 w-8"/>
+          <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" class="h-4" style="width: 135px;"/>
+        </div>
+        <button onclick="toggleMobileMenu()" aria-label="Close menu" class="text-gray-600 hover:text-brand-green">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="space-y-4">
+        <a href="{{ '/news/' | relative_url }}" class="block py-3 text-gray-600 hover:text-brand-green transition-colors text-lg" onclick="toggleMobileMenu()">News</a>
+        <a href="{{ '/products/' | relative_url }}" class="block py-3 text-gray-600 hover:text-brand-green transition-colors text-lg" onclick="toggleMobileMenu()">Products</a>
+        <a href="{{ '/contact/' | relative_url }}" class="block py-3 text-gray-600 hover:text-brand-green transition-colors text-lg" onclick="toggleMobileMenu()">Contact</a>
+        <a href="https://apps.oliveoctagon.com" class="block mt-6 bg-brand-green text-white px-4 py-3 hover:bg-brand-dark transition-colors text-lg text-center" onclick="toggleMobileMenu()">Client Area</a>
+      </div>
+    </div>
   </nav>
 
   <main style="flex: 1;">
@@ -119,38 +121,24 @@
   </div>
 
   <script>
-
-  // Toggle between showing and hiding the sidebar when clicking the menu icon
-  var mySidebar = document.getElementById("mySidebar");
-
-  function w3_open() {
-    if (mySidebar.style.display === 'block') {
-      mySidebar.style.display = 'none';
-    } else {
-      mySidebar.style.display = 'block';
+  // Mobile menu toggle for left-sliding menu
+  function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    var overlay = document.getElementById('mobile-overlay');
+    
+    if (menu && overlay) {
+      // Check if menu is currently hidden (has -translate-x-full class)
+      if (menu.classList.contains('-translate-x-full')) {
+        // Menu is closed, open it
+        menu.classList.remove('-translate-x-full');
+        overlay.classList.remove('hidden');
+      } else {
+        // Menu is open, close it
+        menu.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      }
     }
   }
-
-  // Close the sidebar with the close button
-  function w3_close() {
-    mySidebar.style.display = "none";
-  }
-
-  // Animate the partner in text
-  var partnerInTextSpan = document.getElementById("partner-in-text");
-  var partnerInTextSmSpan = document.getElementById("partner-in-text-sm");
-
-  if (partnerInTextSpan && partnerInTextSmSpan) {
-    var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
-    var i = 1;
-    setInterval(function() {
-      partnerInTextSpan.innerText = partnerInWords[i];
-      partnerInTextSmSpan.innerText = partnerInWords[i];
-      i = (i + 1) % partnerInWords.length;
-    }, 1000);
-  }
-
-
   </script>
 
   </body>

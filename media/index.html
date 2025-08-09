@@ -4,42 +4,22 @@ title: Media Room
 ---
 
 <!-- Hero Header -->
-<div class="w3-container" style="background-image:url('office-bg.jpg'); background-size:cover; background-position:center; height:300px;">
-  <h1 class="w3-center" style="color:white; padding-top:100px; font-size:3rem; margin:0;">MEDIA ROOM</h1>
+<div class="bg-cover bg-center text-5xl flex items-center justify-center h-75" style="background-image:url('office-bg.jpg');">
+  <h1 class="text-center text-white m-0">MEDIA ROOM</h1>
 </div>
 
-<div class="w3-content">
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m12 w3-large">
-      <p style="margin-top:0">Welcome to the Olive Octagon media room. Here you can find our latest press releases, news articles, and other media resources.</p>
-      <p>For questions, requests for comment, or any other general press enquiries, please get in touch.</p>
-      <div class="w3-bar">
-        <a href="{{ '/news/' | relative_url }}" class="w3-btn w3-margin w3-large w3-theme" style="font-size:1rem;">View Latest Articles</a>
-      </div>
+<div class="max-w-7xl mx-auto my-16 px-4">
+  <div class="text-xl text-center [&_p]:mb-5">
+    <p>Welcome to the Olive Octagon media room. Here you can find our latest press releases, news articles, and other media resources.</p>
+    <p>For questions, requests for comment, or any other general press enquiries, please get in touch.</p>
+    <div class="m-12">
+      <a href="{{ '/news/' | relative_url }}" class="bg-brand-green text-white py-3 px-6 hover:bg-brand-dark transition-colors text-center">View Latest Articles</a>
     </div>
   </div>
-  <div class="w3-row-padding" style="display:flex;flex-direction:column;align-items: center;">
-    <div class="w3-col l7 m12 w3-large">
-      <h2 style="margin:32px 0;">Media Contacts</h2>
-    </div>
-  </div>
-  <div class="w3-row-padding" style="margin:0 0 64px 0;display:flex;flex-direction:column;align-items: center;">
-    <div class="w3-col l6 m12 w3-large">
-      <div class="w3-card w3-white" style="border-radius:8px;padding:24px;">
-        <div style="display:flex; align-items:center; margin-bottom:16px; gap:16px">
-          <img src="/assets/images/ben.jpg" alt="Ben Joyce, Founder & CEO, Olive Octagon" class="w3-circle" style="width:100px; height:100px; object-fit:cover;">
-          <div>
-            <h2 style="margin:0;">Ben Joyce FIA</h2>
-            <p style="font-style:italic; color:#555; margin:0">Founder and CEO, Olive Octagon</p>
-          </div>
-        </div>
-        <div>
-          <p>Ben has over 24 years of experience in software development, with a focus on actuarial and financial reporting systems.</p>
-          <p>He is passionate about using technology to improve productivity and performance in regulatory reporting and beyond.</p>
-          <p>As the founder of Olive Octagon, a provider of various software reporting solutions to the industry, he has become one of the UK's leading voices on regulation and compliance.</p>
-          <p>For a quote, comment or interview request, please get in touch.</p>
-        </div>
-      </div>
-    </div>
+  <div class="max-w-2xl mx-auto my-16">
+    <h2 class="text-3xl my-8">Media Contacts</h2>
+    
+    {% include ben-card.html %}
+
   </div>
 </div>

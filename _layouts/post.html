@@ -2,54 +2,41 @@
 layout: default
 ---
 <!-- Hero Header -->
-<div class="w3-container" style="background-image:url('{{ '/news/news-bg.jpg' | relative_url }}'); background-size:cover; background-position:center; font-size:3rem; height:3em; display: flex; align-items:center; justify-content: center;">
-<h1 class="w3-center" style="color:white; margin:0;">NEWS</h1>
+<div class="bg-cover bg-center text-5xl flex items-center justify-center h-36" style="background-image:url('{{ '/news/news-bg.jpg' | relative_url }}')">
+  <div class="text-center text-white m-0">NEWS</div>
 </div>
 
-<!-- Link back to the news page -->
-<nav style="padding: 32px 16px 0 16px; max-width: 1264px; margin: auto;">
-<a href="{{ '/news/' | relative_url }}" class="" style="margin-bottom: 16px;">&larr; Back to News</a>
-</nav>
+<div class="max-w-7xl mx-auto my-8 px-4">
 
-<article class="w3-content">
-<header class="post-hero">
-    <h1 class="w3-xxxlarge">{{ page.title }}</h1>
-    <p class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%A, %-d %B %Y" }}
-    </time>
-    {% if page.author %}&nbsp;&bull;&nbsp;By {{ page.author }}{% endif %}
-    </p>
-</header>
+  <!-- Link back to the news page -->
+  <nav>
+    <a href="{{ '/news/' | relative_url }}" class="" style="margin-bottom: 16px;">&larr; Back to News</a>
+  </nav>
 
-{% if page.image %}
-    <div class="w3-padding-32 w3-auto" style="max-width: 1000px;">
-    <img src="{{ page.image }}" alt="Featured image for {{ page.title }}" class="news-image" style="width:100%; border-radius: 8px;">
+  <article class="prose max-w-6xl mx-auto my-8">
+    <header>
+        <h1 class="text-5xl font-normal">{{ page.title }}</h1>
+        <p>
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+              {{ page.date | date: "%A, %-d %B %Y" }}
+          </time>
+          {% if page.author %}&nbsp;&bull;&nbsp;By {{ page.author }}{% endif %}
+        </p>
+    </header>
+
+    {% if page.image %}
+      <img src="{{ page.image }}" alt="Featured image for {{ page.title }}" class="aspect-7/3 object-cover w-full">
+    {% endif %}
+
+    <div class="@container
+    [&_*:not(img):not(:has(img))]:max-w-2xl 
+    [&>*:not(img):not(:has(img))]:mx-auto
+    [@container(min-width:calc(theme(maxWidth.2xl)+theme(spacing.24)*2))]:[&>*:not(img):not(:has(img))]:ml-24">
+      {{ content }}
     </div>
-{% endif %}
+  </article>
+    
+  {% include ben-card.html %}
 
-<div class="post-content">
-    {{ content }}
-</div>
-</article>
-
-<div class="w3-content">
-  <div class="w3-row-padding" style="margin:0 0 64px 0;display:flex;flex-direction:column;align-items: center;">
-    <div class="w3-col l6 m12 w3-large">
-      <div class="w3-card w3-white" style="border-radius:8px;padding:24px;">
-        <div style="display:flex; align-items:center; margin-bottom:16px; gap:16px">
-          <img src="/assets/images/ben.jpg" alt="Ben Joyce FIA, Founder & CEO, Olive Octagon" class="w3-circle" style="width:100px; height:100px; object-fit:cover;">
-          <div>
-            <h2 style="margin:0;">Ben Joyce FIA</h2>
-            <p style="font-style:italic; color:#555; margin:0">Founder and CEO, Olive Octagon</p>
-          </div>
-        </div>
-        <div>
-          <p>Ben has over 24 years of experience in software development, with a focus on actuarial and financial reporting systems.</p>
-          <p>He is passionate about using technology to improve productivity and performance in regulatory reporting and beyond.</p>
-          <p>As the founder of Olive Octagon, a provider of various software reporting solutions to the industry, he has become one of the UK's leading voices on regulation and compliance.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 </div>
