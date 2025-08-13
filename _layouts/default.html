@@ -7,11 +7,11 @@
     {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
     <meta name="apple-mobile-web-app-title" content="Olive Oct" />
     <title>{{ page.title }} | Olive Octagon</title>
-    <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" fetchpriority="high">
+    <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" />
     <link rel="icon" type="image/png" href="{{ '/favicon-96x96.png' | relative_url }}" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
     <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
-    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="{{ '/assets/css/w3pro.css' | relative_url }}">
     <link rel="canonical" href="https://www.oliveoctagon.com{{ page.url }}" />
 
