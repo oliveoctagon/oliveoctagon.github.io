@@ -1,147 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% if page.description %}
-  <meta name="description" content="{{ page.description | escape }}">
-{% endif %}
-<meta name="apple-mobile-web-app-title" content="Olive Oct" />
-<title>{{ page.title }} | Olive Octagon</title>
-<link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" fetchpriority="high">
-<link rel="icon" type="image/png" href="{{ '/favicon-96x96.png' | relative_url }}" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
-<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}" />
-<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
-<link rel="stylesheet" href="{{ '/assets/css/w3pro.css' | relative_url }}">
-<link rel="canonical" href="https://www.oliveoctagon.com{{ page.url }}" />
-<style>
-@font-face {
-  font-family: 'Gabarito';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/gabarito/v7/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj248KEEQgqiaPVIzHL.woff) format('woff');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
-html {height: 100%; line-height: 1.8;}
-.full-height {min-height: calc(100vh - 60px);}
-.news-image {aspect-ratio: 7 / 3; width: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; clip-path: inset(0px);}
-.w3-card:hover .news-image {transform: scale(1.1);}
-.image-container {width: 100%; position: relative;}
-.image-cropper {border-top-left-radius: 8px; border-top-right-radius: 8px; overflow: hidden;}
-.post-content {font-size: 1.25rem; margin: 32px 0;}
-.post-content p { margin-bottom: 0.75rem; }
-.post-content h2 {margin-top:2rem;}
-.post-content hr {margin:2rem 0;}
-.card-content {display:flex; flex-direction: column; height:100%}
-.w3-bar .w3-button {padding: 16px;}
-.w3-theme {color:#fff !important; background-color:#383 !important}
-.w3-theme-inverse {color:#383 !important; background-color:#fff !important}
-.w3-theme-dark {color:#fff !important; background-color:#252 !important}
-.w3-theme-white {color:#000 !important; background-color:#fff !important}
-.w3-theme-black {color:#fff !important; background-color:#000 !important}
-.w3-content {max-width:1232px;margin:64px auto; padding: 0 16px;}
-footer { padding: 60px; }
-footer a {text-decoration:none;}
-footer a:hover {text-decoration:underline;}
-@media (max-width: 600px) { 
-  .w3-content { margin-top: 2rem !important; margin-bottom: 2rem !important; }
-  footer { padding: 1.25rem 2rem; }
-}
-</style>
-</head>
-<body style="height: 100%;">
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}" />
+    {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+    <meta name="apple-mobile-web-app-title" content="Olive Oct" />
+    <title>{{ page.title }} | Olive Octagon</title>
+    <link rel="preload" href="/logo.svg" as="image" type="image/svg+xml" fetchpriority="high">
+    <link rel="icon" type="image/png" href="{{ '/favicon-96x96.png' | relative_url }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}" />
+    <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
+    <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/w3pro.css' | relative_url }}">
+    <link rel="canonical" href="https://www.oliveoctagon.com{{ page.url }}" />
 
-<div style="display: flex; flex-direction: column; min-height: 100%;">
+    <meta property="og:site_name" content="Olive Octagon" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://www.oliveoctagon.com{{ page.url }}" />
+    {% if page.ogtype %}<meta property="og:type" content="{{ page.ogtype }}" />{% endif %}
+    {% if page.ogtitle %}<meta property="og:title" content="{{ page.ogtitle }}" />{% endif %}
+    {% if page.ogdescription %}<meta property="og:description" content="{{ page.ogdescription }}" />{% endif %}
+    {% if page.ogimage %}<meta property="og:image" content="{{ page.ogimage }}" />{% else %}<meta property="og:image" content="/assets/images/olive-octagon.png" />{% endif %}
+    <meta property="og:image:width" content="1279" />
+    <meta property="og:image:height" content="720" />
+    {% if page.ogimagealt %}<meta property="og:image:alt" content="{{ page.ogimagealt }}" />{% else %}{% if page.ogimage %}{% else %}<meta property="og:image:alt" content="Olive Octagon logo and some olive branches" />{% endif %}{% endif %}
 
-<!-- Navbar (sit on top) -->
-<div style="position: sticky;top: 0;z-index:1;background-color:#fff;">
-  <div class="w3-bar w3-card" id="myNavbar" style="height: 60px;">
-    <a href="{{ '/' | relative_url }}" class="w3-bar-item w3-button w3-xlarge" style="padding: 4px;">
-      <img src="{{ '/logo.svg' | relative_url }}" alt="Olive Octagon logo" height="52px" width="52px"/>
-      <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" height="26px" width="169px" style="margin-top: 4px; margin-left: 2px;"/>
-    </a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small" style="height: 60px;">
-      <a href="{{ '/news/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">NEWS</a>
-      <a href="{{ '/products/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">PRODUCTS</a>
-      <a href="{{ '/contact/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">CONTACT</a>
-      <a href="https://apps.oliveoctagon.com/" class="w3-bar-item w3-button" style="height: 60px; background-color: #225522; color: #ffffff;">APPS</a>
+    <style>
+      @font-face {
+        font-family: 'Gabarito';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/gabarito/v7/QGYwz_0dZAGKJJ4t3FFkc3Q8AkNP9Pj248KEEQgqiaPVIzHL.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Gabarito", sans-serif;}
+      html {height: 100%; line-height: 1.8;}
+      .full-height {min-height: calc(100vh - 60px);}
+      .news-image {aspect-ratio: 7 / 3; width: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; clip-path: inset(0px);}
+      .w3-card:hover .news-image {transform: scale(1.1);}
+      .image-container {width: 100%; position: relative;}
+      .image-cropper {border-top-left-radius: 8px; border-top-right-radius: 8px; overflow: hidden;}
+      .post-content {font-size: 1.25rem; margin: 32px 0;}
+      .post-content p { margin-bottom: 0.75rem; }
+      .post-content h2 {margin-top:2rem;}
+      .post-content hr {margin:2rem 0;}
+      .card-content {display:flex; flex-direction: column; height:100%}
+      .w3-bar .w3-button {padding: 16px;}
+      .w3-theme {color:#fff !important; background-color:#383 !important}
+      .w3-theme-inverse {color:#383 !important; background-color:#fff !important}
+      .w3-theme-dark {color:#fff !important; background-color:#252 !important}
+      .w3-theme-white {color:#000 !important; background-color:#fff !important}
+      .w3-theme-black {color:#fff !important; background-color:#000 !important}
+      .w3-content {max-width:1232px;margin:64px auto; padding: 0 16px;}
+      footer { padding: 60px; }
+      footer a {text-decoration:none;}
+      footer a:hover {text-decoration:underline;}
+      @media (max-width: 600px) { 
+        .w3-content { margin-top: 2rem !important; margin-bottom: 2rem !important; }
+        footer { padding: 1.25rem 2rem; }
+      }
+    </style>
+  </head>
+  <body style="height: 100%;">
+
+  <div style="display: flex; flex-direction: column; min-height: 100%;">
+
+  <!-- Navbar (sit on top) -->
+  <div style="position: sticky;top: 0;z-index:1;background-color:#fff;">
+    <div class="w3-bar w3-card" id="myNavbar" style="height: 60px;">
+      <a href="{{ '/' | relative_url }}" class="w3-bar-item w3-button w3-xlarge" style="padding: 4px;">
+        <img src="{{ '/logo.svg' | relative_url }}" alt="Olive Octagon logo" height="52px" width="52px"/>
+        <img src="{{ '/oliveoctagon.svg' | relative_url }}" alt="Olive Octagon" height="26px" width="169px" style="margin-top: 4px; margin-left: 2px;"/>
+      </a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small" style="height: 60px;">
+        <a href="{{ '/news/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">NEWS</a>
+        <a href="{{ '/products/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">PRODUCTS</a>
+        <a href="{{ '/contact/' | relative_url }}" class="w3-bar-item w3-button" style="height: 60px;">CONTACT</a>
+        <a href="https://apps.oliveoctagon.com/" class="w3-bar-item w3-button" style="height: 60px; background-color: #225522; color: #ffffff;">APPS</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <button href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="color: #225522;" onclick="w3_open()" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="28" fill="currentColor"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+      </button>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <button href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" style="color: #225522;" onclick="w3_open()" aria-label="Open menu">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="28" fill="currentColor"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-    </button>
   </div>
-</div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-theme w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <button href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" aria-label="Close menu">Close ×</button>
-  <a href="{{ '/news/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
-  <a href="{{ '/products/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">PRODUCTS</a>
-  <a href="{{ '/contact/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-  <a href="https://apps.oliveoctagon.com/" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
-</nav>
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-theme w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <button href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16" aria-label="Close menu">Close ×</button>
+    <a href="{{ '/news/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
+    <a href="{{ '/products/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">PRODUCTS</a>
+    <a href="{{ '/contact/' | relative_url }}" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="https://apps.oliveoctagon.com/" onclick="w3_close()" class="w3-bar-item w3-button">APPS</a>
+  </nav>
 
-<main style="flex: 1;">
+  <main style="flex: 1;">
 
-  {{ content }}
+    {{ content }}
 
-  {% if page.url == "/contact/" %}
-    {% include contact-form.html %}
-  {% elsif page.url == "/contact/sent/" %}
+    {% if page.url == "/contact/" %}
+      {% include contact-form.html %}
+    {% elsif page.url == "/contact/sent/" %}
 
-  {% else %}
-    <hr />
-    {% include contact-form.html %}
-  {% endif %}
+    {% else %}
+      <hr />
+      {% include contact-form.html %}
+    {% endif %}
 
-</main>
+  </main>
 
-<!-- Footer -->
-{% include footer.html %}
+  <!-- Footer -->
+  {% include footer.html %}
 
-</div>
+  </div>
 
-<script>
+  <script>
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
   }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-}
+  // Close the sidebar with the close button
+  function w3_close() {
+    mySidebar.style.display = "none";
+  }
 
-// Animate the partner in text
-var partnerInTextSpan = document.getElementById("partner-in-text");
-var partnerInTextSmSpan = document.getElementById("partner-in-text-sm");
+  // Animate the partner in text
+  var partnerInTextSpan = document.getElementById("partner-in-text");
+  var partnerInTextSmSpan = document.getElementById("partner-in-text-sm");
 
-if (partnerInTextSpan && partnerInTextSmSpan) {
-  var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
-  var i = 1;
-  setInterval(function() {
-    partnerInTextSpan.innerText = partnerInWords[i];
-    partnerInTextSmSpan.innerText = partnerInWords[i];
-    i = (i + 1) % partnerInWords.length;
-  }, 1000);
-}
+  if (partnerInTextSpan && partnerInTextSmSpan) {
+    var partnerInWords = ["productivity", "performance", "progress", "peace of mind"];
+    var i = 1;
+    setInterval(function() {
+      partnerInTextSpan.innerText = partnerInWords[i];
+      partnerInTextSmSpan.innerText = partnerInWords[i];
+      i = (i + 1) % partnerInWords.length;
+    }, 1000);
+  }
 
 
-</script>
+  </script>
 
-</body>
+  </body>
 </html>

@@ -5,6 +5,12 @@ date: 2025-02-14
 image: /assets/images/golden-padlock.jpg
 author: Ben Joyce FIA
 description: Overview of the requirements for reporting DORA Register of Information data using XBRL-CSV, including required templates and package structure.
+
+ogtype: article
+ogtitle: DORA Registers of Information XBRL Reporting
+ogdescription: Deadline for reporting DORA Registers of Information is fast approaching
+ogimage: /assets/images/golden-padlock.jpg
+ogimagealt: A combination padlock resting on a keyboard with some chip and pin cards
 ---
 
 The requirement to comply with the Digital Operational Resilience Act (DORA) came into effect on 17 January 2025, and the first reporting requirement is the Register of Information as at 31 March 2025 which is to be submitted to national regulators shortly thereafter.

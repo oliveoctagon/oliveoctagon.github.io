@@ -6,6 +6,12 @@ image: /assets/images/money-pounds.jpg
 author: Ben Joyce FIA
 excerpt: A public working draft of the Bank of England Insurance Liquidity Reporting XBRL taxonomy is out now with feedback requested by 30 April.
 description: Information about the new PRA Liquidity Reporting requirement including frequency of data submissions and considerations for choosing XBRL software.
+
+ogtype: article
+ogtitle: PRA Liquidity Reporting
+ogdescription: A public working draft of the Bank of England Insurance Liquidity Reporting XBRL taxonomy is out now with feedback requested by 30 April.
+ogimage: /assets/images/money-pounds.jpg
+ogimagealt: Various denomination UK Pound notes spread out across a flat surface
 ---
 
 ---

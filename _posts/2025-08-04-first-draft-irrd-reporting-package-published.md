@@ -6,6 +6,12 @@ image: /assets/images/ducks.jpg
 author: Ben Joyce FIA
 excerpt: The first public working draft of the Insurance Recovery and Resolution Directive (IRRD) XBRL taxonomy is out now with feedback requested by 31 October.
 description: Information about the new Insurance Recovery and Resolution Directive (IRRD) requirements.
+
+ogtype: article
+ogtitle: IRRD XBRL Reporting
+ogdescription: What you need to know, and how to get ready for the upcoming Insurance Recovery and Resolution Directive (IRRD) reporting.
+ogimage: /assets/images/ducks.jpg
+ogimagealt: A line of rubber ducks all facing the same direction on a blue background
 ---
 
 EIOPA has launched its long-awaited consultation on the draft reporting framework for the Insurance Recovery and Resolution Directive (IRRD). This marks a key milestone in the development of the EU's approach to ensuring orderly recovery and resolution for insurers, and with it comes a first look at the proposed technical reporting requirements, including a draft XBRL taxonomy.
