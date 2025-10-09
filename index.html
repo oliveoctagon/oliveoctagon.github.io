@@ -42,15 +42,15 @@ ogdescription: Simple, reliable, excellent XBRL regulatory reporting software fo
     <section id="products" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">Our Products</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Featured Products</h2>
                 <p class="mt-4 text-lg text-gray-600">XBRL reporting software that works with Excel. Nothing extra to install. No data leaves your network.</p>
             </div>
             
-            {% include all-products-cards.html %}
+            {% include all-products-cards.html limit=3 %}
             
             <div class="text-center mt-16">
                 <a href="{{ '/products/' | relative_url }}" class="inline-flex items-center text-gray-800 hover:text-black transition-colors duration-200 font-medium text-lg">
-                    View More Products
+                    View All Products
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>

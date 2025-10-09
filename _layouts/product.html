@@ -89,7 +89,7 @@ layout: default
 <section id="urgencyBanner" class="bg-red-600 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="text-center">
-            <span class="font-bold" id="bannerTitle">⚠️ DORA Reporting Date: 31 December</span>
+            <span class="font-bold" id="bannerTitle">⚠️ Next Reporting Date: {{ page.urgency_banner.date }}</span>
             <span class="mx-4">|</span>
             <span id="bannerMessage">Don't wait, get set up in minutes</span>
             <span class="mx-4">|</span>
@@ -485,7 +485,7 @@ layout: default
         if ((month >= 7) || (month === 12 && day <= 31)) {
             // July 1 - December 31: Current behavior (red banner with countdown)
             banner.className = 'bg-red-600 text-white';
-            bannerTitle.textContent = `⚠️ DORA Reporting Date: 31 December ${currentYear}`;
+            // bannerTitle.textContent = `⚠️ DORA Reporting Date: 31 December ${currentYear}`;
             
             const deadline = new Date(currentYear, 11, 31); // December 31 of current year
             const timeDiff = deadline.getTime() - today.getTime();
@@ -502,13 +502,13 @@ layout: default
         } else if (month === 1) {
             // January 1 - January 31: Red banner with different message
             banner.className = 'bg-red-600 text-white';
-            bannerTitle.textContent = `⚠️ DORA Reporting Deadline: January ${currentYear}`;
+            bannerTitle.textContent = `⚠️ Next Reporting Deadline: January ${currentYear}`;
             bannerMessage.textContent = 'Don\'t submit late! Get set up in minutes';
             
         } else if (month >= 2 && month <= 6) {
             // February 1 - June 30: Non-red banner
             banner.className = 'bg-green-700 text-white';
-            bannerTitle.textContent = `Next DORA Reporting Date: 31 December ${currentYear}`;
+            bannerTitle.textContent = `Next Reporting Date: 31 December ${currentYear}`;
             bannerMessage.textContent = 'Get your solution in place early';
         }
     }

@@ -108,6 +108,8 @@
       {% include contact-form.html %}
     {% elsif page.url == "/contact/sent/" %}
 
+    {% elsif page.url == "/media/" %}
+      {% include contact-form.html heading="Get in Touch" subheading="Let us know how we can be of assistance" %}
     {% else %}
       <hr />
       {% include contact-form.html %}
