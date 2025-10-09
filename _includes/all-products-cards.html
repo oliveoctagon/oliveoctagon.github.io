@@ -3,8 +3,8 @@
     {% for product in site.data.products limit: limit_val %}
     <div class="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
         <div class="overflow-hidden">
-            <a href="{{ product.url | relative_url }}">
-                <img src="{{ product.image }}" alt="" class="aspect-7/3 object-cover transition-transform duration-300 group-hover:scale-110">
+            <a href="{{ product.url | relative_url }}" aria-label="Learn more about our {{ product.name }} product">
+                <img src="{{ product.image }}" alt="{{ product.image_alt_text }}" class="aspect-7/3 object-cover transition-transform duration-300 group-hover:scale-110">
             </a>
         </div>
         <div class="p-8 flex flex-col flex-grow">

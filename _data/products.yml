@@ -9,6 +9,7 @@
   hover_color: "brand-dark"
   card_border: "border-2 border-brand-green"
   image: /assets/images/golden-padlock.jpg
+  image_alt_text: "A combination padlock resting on a keyboard with some chip and pin cards"
   features:
     - "Complete DORA compliance solution"
     - "Register of Information templates"
@@ -27,6 +28,7 @@
   hover_color: "purple-600"
   card_border: ""
   image: /assets/images/money-pounds.jpg
+  image_alt_text: "Various denomination UK Pound notes spread out across a flat surface"
   features:
     - "Liquidity reporting for large insurers"
     - "Early access to the new templates"
@@ -44,6 +46,7 @@
   hover_color: "blue-600"
   card_border: ""
   image: /assets/images/ducks.jpg
+  image_alt_text: "A line of rubber ducks all facing the same direction on a blue background"
   features:
     - "Use the first draft reporting taxonomy"
     - "Early access to the new templates"
