@@ -248,14 +248,14 @@ layout: default
         
         <div class="relative">
             <!-- Left Navigation Button -->
-            <button id="scrollLeft" class="absolute left-4 bg-white hover:bg-gray-100 text-gray-700 rounded-full p-3 shadow-lg z-10 transition-all duration-200" style="top: calc(50% - 6rem); transform: translateY(-50%);" onclick="scrollToImage(-1)">
+            <button aria-label="Previous screenshot" id="scrollLeft" class="absolute left-4 bg-white hover:bg-gray-100 text-gray-700 rounded-full p-3 shadow-lg z-10 transition-all duration-200" style="top: calc(50% - 6rem); transform: translateY(-50%);" onclick="scrollToImage(-1)">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
             </button>
             
             <!-- Right Navigation Button -->
-            <button id="scrollRight" class="absolute right-4 bg-white hover:bg-gray-100 text-gray-700 rounded-full p-3 shadow-lg z-10 transition-all duration-200" style="top: calc(50% - 6rem); transform: translateY(-50%);" onclick="scrollToImage(1)">
+            <button aria-label="Next screenshot" id="scrollRight" class="absolute right-4 bg-white hover:bg-gray-100 text-gray-700 rounded-full p-3 shadow-lg z-10 transition-all duration-200" style="top: calc(50% - 6rem); transform: translateY(-50%);" onclick="scrollToImage(1)">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>

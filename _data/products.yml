@@ -17,6 +17,24 @@
     - "Professional support"
   button_text: "Learn More"
 
+- name: "Lloyd's Schedule 3"
+  regulationFullName: "Lloyd's of London Schedule 3 Data"
+  slug: "lloyds-schedule-3"
+  url: "products/lloyds-schedule-3/"
+  price: "£1,100"
+  price_period: " /year"
+  status: "Active Product"
+  color: "purple-500"
+  hover_color: "purple-600"
+  card_border: ""
+  image: /assets/images/lloyds.jpg
+  image_alt_text: "A view of the Lloyd's of London building looking up from ground level with a blue sky behind"
+  features:
+    - "Schedule 3 data template to XBRL conversion"
+    - "Use the Lloyd's Excel templates"
+    - "Fast and secure conversion with no software installation required"
+  button_text: "Learn More"
+
 - name: "PRA Liquidity"
   regulationFullName: "Bank of England Insurance Liquidity"
   slug: "pra-liquidity"
