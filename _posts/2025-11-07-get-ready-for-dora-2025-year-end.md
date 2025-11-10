@@ -25,7 +25,7 @@ There have been some minor relaxations in the ZIP package structure, most notabl
 What did we learn from Q1 2025 reporting?
 ---
 
-On 16&nbsp;April 2025, the ESAs published ["Observations from reporting of RoI to the ESAs. Key common issues identified"](https://eba.europa.eu/sites/default/files/2025-04/717e7e5f-14ac-45c6-b336-b0aac6a9062a/Observations%20from%20RoI%20reporting%20testing%20-%20common%20issues%20-%20April%202025%20%281%29.pdf). In this document, the key issues encountered in Q1 2025 reporting were highlighted, and the can be summarised as:
+On 16&nbsp;April 2025, the ESAs published ["Observations from reporting of RoI to the ESAs. Key common issues identified"](https://eba.europa.eu/sites/default/files/2025-04/717e7e5f-14ac-45c6-b336-b0aac6a9062a/Observations%20from%20RoI%20reporting%20testing%20-%20common%20issues%20-%20April%202025%20%281%29.pdf). In this document, the key issues encountered in Q1 2025 reporting were highlighted, and they can be summarised as:
 
 - Invalid report package structure
   - Entity ID and/or reporting date not matching the ZIP package file name
@@ -40,7 +40,7 @@ On 16&nbsp;April 2025, the ESAs published ["Observations from reporting of RoI t
   - Invalid EUID codes (these are harder for reporters to check so care must be taken when completing the data)
   - Missing mandatory fields
 
-The above issues can generally be highlighted early to reporter by running the a high-quality set of validation tests on reporting packages before submission.
+The above issues can generally be highlighted early to reporters by running a high-quality set of validation tests on reporting packages before submission.
 
 What should companies do to prepare for year end 2025?
 ---
