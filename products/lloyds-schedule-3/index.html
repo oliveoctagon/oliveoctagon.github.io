@@ -31,7 +31,10 @@ hero:
     - text: "Generate XBRL"
       status: "in-progress"
       status_text: "In Progress"
-  progress: 67
+    - text: "Import XBRL to Excel"
+      status: "pending"
+      status_text: "Pending"
+  progress: 50
 
 # Urgency banner
 urgency_banner:
@@ -75,6 +78,7 @@ pricing:
       badge: "EVERYTHING"
       features:
         - "Unlimited XBRL generation for a single reporting entity"
+        - "XBRL import to Excel functionality"
         - "Unlimited user accounts"
         - "Uses the standard Lloyd's Excel templates"
         - "Priority support"
@@ -108,7 +112,7 @@ technical_specs:
         - "Standard Lloyd's Schedule&nbsp;3 templates"
         - "Excel-based data entry"
         - "Leverages Lloyd's built-in validations"
-        - "Schedule&nbsp;3 XBRL-XML export"
+        - "Schedule&nbsp;3 XBRL-XML export and import"
         - "XBRL standard compliance guaranteed"
     - title: "System Requirements"
       items:
@@ -131,7 +135,7 @@ screenshots:
     - file: "download-templates.png"
       alt: "Screenshot of the Download Templates step"
       title: "Download Excel template file"
-      description: "The template file used is the standard Schedule&nbsp;3 Data Template v2.0 published by Lloyd's. You can download it from lloyds.com or from our tool."
+      description: "The template file used is the standard Schedule&nbsp;3 Data Template v2.1 published by Lloyd's. You can download it from lloyds.com or from our tool."
     - file: "excel-1.png"
       alt: "Screenshot of the Lloyd's Schedule&nbsp;3 templates Key Inputs page"
       title: "Standard Lloyd's templates"
@@ -162,7 +166,7 @@ details:
   cards:
     - title: "Reporting Taxonomy"
       icon: '<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>'
-      content: '<p>Schedule&nbsp;3 data is reported using <a href="https://www.lloyds.com/market-resources/syndicate-accounts-and-financial-reporting#Specifications" target="_blank" rel="noopener" class="text-brand hover:text-brand-dark underline">Lloyd’s XBRL Taxonomy 2025 V1.0</a>.</p><p>Note that this version of the taxonomy was published on 30&nbsp;May 2025 and is different from the version used for the annual Syndicate Accounts iXBRL reports.</p>'
+      content: '<p>Schedule&nbsp;3 data is reported using <a href="https://www.lloyds.com/market-resources/syndicate-accounts-and-financial-reporting#Specifications" target="_blank" rel="noopener" class="text-brand hover:text-brand-dark underline">Lloyd’s XBRL Taxonomy 2025 V2.0</a>.</p><p>Note that this version of the taxonomy was published on 1&nbsp;December 2025 and is different from the version used for the 2024 annual Syndicate Accounts iXBRL reports.</p>'
     - title: "Common Issues"
       icon: '<svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 16 16"><path d="M12.096 6.223A5 5 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.5 4.5 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.5 4.5 0 0 1-.813-.927Q8.378 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.6 4.6 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10q.393 0 .774-.024a4.5 4.5 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777M3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4"/><path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 0 0 1 0V11a.5.5 0 0 0-.5-.5m0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/></svg>'
       content: "<p>We are currently in contact with Lloyd's in order to get clarification on a few technical questions we have regarding reporting. We will update the FAQs in due course.</p>"
