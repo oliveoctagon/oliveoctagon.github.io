@@ -1,0 +1,778 @@
+---
+permalink: /auth-template.html
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive Octagon</title>
+    <style data-preload="true">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fdf8 50%, #f0f8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        header img {
+            max-width: 160px;
+            height: auto;
+        }
+
+        main {
+            background: #ffffff;
+            border-radius: 0;
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.02);
+            padding: 36px 32px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #8a9a8a;
+            font-size: 13px;
+        }
+
+        footer p + p {
+            margin-top: 4px;
+        }
+
+        footer a {
+            color: #383;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #252;
+            text-decoration: underline;
+        }
+
+        /* B2C Injected Content Styles */
+        #api {
+            width: 100%;
+        }
+
+        /* Form element reset */
+        #api form {
+            display: block;
+        }
+
+        /* Main heading */
+        #api .heading {
+            margin-bottom: 28px;
+        }
+
+        #api .heading h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a251a;
+            margin: 0;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        /* Hide intro section */
+        #api .intro {
+            display: none;
+        }
+
+        /* Hide details until email is verified */
+        #api.details-hidden .newPassword_li,
+        #api.details-hidden .reenterPassword_li,
+        #api.details-hidden .displayName_li,
+        #api.details-hidden .country_li {
+            display: none;
+        }
+
+        #api.details-hidden #continue,
+        #api.details-hidden #cancel {
+            display: none;
+        }
+
+        /* Hide empty buttons container at top */
+        #api > .buttons:empty,
+        #api .heading + .buttons:empty {
+            display: none;
+        }
+
+        /* Hide empty error containers */
+        #api .error[aria-hidden="true"] {
+            display: none;
+        }
+
+        /* Form entries */
+        #api .entry {
+            margin-bottom: 0;
+        }
+
+        #api .entry-item {
+            margin-bottom: 20px;
+        }
+
+        /* Labels */
+        #api label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #3a4a3a;
+            margin-bottom: 8px;
+        }
+
+        /* Password label row with forgot link */
+        #api .password-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        #api .password-label label {
+            margin-bottom: 0;
+        }
+
+        #api #forgotPassword {
+            font-size: 13px;
+            font-weight: 500;
+            color: #383;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        #api #forgotPassword:hover {
+            color: #252;
+            text-decoration: underline;
+        }
+
+        /* Input fields */
+        #api input[type="text"],
+        #api input[type="password"],
+        #api input[type="email"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 0;
+            font-size: 16px;
+            line-height: 24px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            background: #ffffff;
+            color: #1a251a;
+        }
+
+        #api input[type="text"]:focus,
+        #api input[type="password"]:focus,
+        #api input[type="email"]:focus {
+            outline: none;
+            border-color: #383;
+            box-shadow: 0 0 0 1px #383;
+        }
+
+        /* Buttons container */
+        #api .buttons {
+            margin-top: 24px;
+        }
+
+        /* Primary button */
+        #api #next,
+        #api button[type="submit"],
+        #api .sendCode,
+        #api .verifyCode,
+        #api #continue {
+            width: 100%;
+            padding: 16px 32px;
+            background: #383;
+            color: #ffffff;
+            border: 2px solid #383;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        #api #next:hover,
+        #api button[type="submit"]:hover,
+        #api .sendCode:hover,
+        #api .verifyCode:hover,
+        #api #continue:hover {
+            background: #252;
+            border-color: #252;
+        }
+
+        /* Cancel/Secondary buttons */
+        #api #cancel,
+        #api .cancel,
+        #api .sendNewCode,
+        #api .changeClaims {
+            width: 100%;
+            padding: 16px 32px;
+            background: #ffffff;
+            color: #374151;
+            border: 2px solid #d1d5db;
+            border-radius: 0;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
+        }
+
+        #api #cancel,
+        #api .cancel {
+            margin-top: 12px;
+        }
+
+        #api #cancel:hover,
+        #api .cancel:hover,
+        #api .sendNewCode:hover,
+        #api .changeClaims:hover {
+            background: #f9fafb;
+            border-color: #6b7280;
+            color: #111827;
+        }
+
+        /* Divider */
+        #api .divider {
+            position: relative;
+            margin: 28px 0;
+            padding: 0;
+            border: none;
+            text-align: center;
+        }
+
+        #api .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e0e8e0;
+        }
+
+        #api .divider h2 {
+            position: relative;
+            display: inline-block;
+            background: #ffffff;
+            padding: 0 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #8a9a8a;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin: 0;
+        }
+
+        /* Create account section */
+        #api .create {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+            text-align: center;
+        }
+
+        #api .create p {
+            color: #5a6a5a;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        #api #createAccount {
+            display: inline;
+            padding: 0;
+            margin-left: 6px;
+            background: transparent;
+            color: #383;
+            border: none;
+            border-radius: 0;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        #api #createAccount:hover {
+            color: #252;
+            text-decoration: underline;
+            background: transparent;
+        }
+
+        /* Error messages - page level */
+        #api .error.pageLevel {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            color: #b91c1c;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        #api .error.pageLevel p {
+            margin: 0;
+        }
+
+        /* Error messages - item level */
+        #api .error.itemLevel:not([aria-hidden="true"]) {
+            padding: 0 10px 8px 10px;
+            color: #b91c1c;
+            font-size: 13px;
+            line-height: 1.35;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #api .error.itemLevel p {
+            color: inherit;
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        #api .attrEntry:not(:focus-within) .error.itemLevel[aria-hidden="false"]:not(:empty) ~ .textInput,
+        #api .attrEntry:not(:focus-within) .error.itemLevel[aria-hidden="false"]:not(:empty) ~ select,
+        #api .entry-item:not(:focus-within) .error.itemLevel[aria-hidden="false"]:not(:empty) ~ input,
+        #api .entry-item:not(:focus-within) .error.itemLevel[aria-hidden="false"]:not(:empty) ~ select {
+            border-color: #fca5a5;
+        }
+
+        /* Success messages */
+        #api .success {
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 0;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            color: #166534;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        /* Remember me checkbox */
+        #api .rememberMe {
+            display: flex;
+            align-items: center;
+            margin: 20px 0 0 0;
+        }
+
+        #api .rememberMe input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            accent-color: #383;
+            cursor: pointer;
+        }
+
+        #api .rememberMe label {
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 14px;
+            color: #4a5a4a;
+            cursor: pointer;
+        }
+
+        /* Social/Identity provider buttons */
+        #api .options {
+            margin-bottom: 0;
+        }
+
+        #api .options div {
+            margin-bottom: 12px;
+        }
+
+        #api .options div:last-child {
+            margin-bottom: 0;
+        }
+
+        #api .options button,
+        #api .accountButton {
+            width: 100%;
+            padding: 14px 16px;
+            background: #ffffff;
+            border: 1.5px solid #d8e0d8;
+            border-radius: 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: #2d3a2d;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #api .options button:hover,
+        #api .accountButton:hover {
+            background: #f8faf8;
+            border-color: #b8c8b8;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Loading state - hide when empty */
+        #api .working:empty {
+            display: none;
+        }
+
+        #api .working:not(:empty) {
+            text-align: center;
+            padding: 16px;
+            color: #6b7c6b;
+            font-size: 14px;
+        }
+
+        /* Attribute list (sign-up form) */
+        #api #attributeList,
+        #api .attr {
+            margin: 0;
+        }
+
+        #api #attributeList ul,
+        #api .attr ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #api #attributeList > ul > li,
+        #api .attr > ul > li {
+            margin-bottom: 20px;
+        }
+
+        #api #attributeList > ul > li:last-child,
+        #api .attr > ul > li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Attribute entry */
+        #api .attrEntry {
+            position: relative;
+        }
+
+        /* Required field indicator */
+        #api label.required::after {
+            content: ' *';
+            color: #dc2626;
+            font-weight: 400;
+        }
+
+        /* Help links - subtle styling */
+        #api .helpLink.tiny {
+            display: none;
+        }
+
+        /* Dropdown select */
+        #api select,
+        #api .dropdown_single {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 0;
+            font-size: 16px;
+            line-height: 24px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 12px center;
+            background-size: 12px;
+            color: #1a251a;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        #api select:focus,
+        #api .dropdown_single:focus {
+            outline: none;
+            border-color: #383;
+            box-shadow: 0 0 0 1px #383;
+        }
+
+        #api select:disabled,
+        #api .dropdown_single:disabled {
+            background-color: #f9fafb;
+            color: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* Disabled input styling */
+        #api input:disabled,
+        #api input[disabled] {
+            background-color: #f9fafb;
+            color: #9ca3af;
+            cursor: not-allowed;
+            border-color: #d1d5db;
+        }
+
+        /* Verification control content */
+        #api .verificationControlContent {
+            margin-bottom: 0;
+        }
+
+        #api .verificationControlContent > ul {
+            margin-bottom: 16px;
+        }
+
+        #api .verificationControlContent > ul > li {
+            margin-bottom: 16px;
+        }
+
+        #api .verificationControlContent > ul > li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Email verification nested list items - override inline display */
+        #api .verificationControlContent > ul > li[style*="display: inline"] {
+            display: block !important;
+        }
+
+        #api .verificationControlContent ul ul > li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Verification info/success/error text */
+        #api .verificationInfoText,
+        #api .verificationSuccessText,
+        #api .verificationErrorText {
+            margin-bottom: 12px;
+        }
+
+        #api .verificationInfoText div,
+        #api .verificationSuccessText div {
+            color: #5a6a5a;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        #api .verificationSuccessText div[style*="display: inline"] {
+            display: block !important;
+            color: #166534;
+            background: #f0fdf4;
+            border: 1px solid #86efac;
+            border-radius: 0;
+            padding: 12px 14px;
+        }
+
+        #api .verificationErrorText div[style*="display: inline"] {
+            display: block !important;
+            color: #b91c1c;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 0;
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+
+        /* Hide empty verification messages */
+        #api .verificationInfoText div[style*="display: none"],
+        #api .verificationSuccessText div[style*="display: none"],
+        #api .verificationErrorText div[style*="display: none"] {
+            display: none !important;
+        }
+
+        /* Verification buttons container */
+        #api .verificationControlContent .buttons {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* Make verification buttons not full width */
+        #api .verificationControlContent .buttons .sendCode,
+        #api .verificationControlContent .buttons .verifyCode,
+        #api .verificationControlContent .buttons .sendNewCode,
+        #api .verificationControlContent .buttons .changeClaims {
+            width: auto;
+            flex: 1;
+            min-width: 140px;
+            padding: 12px 20px;
+            font-size: 15px;
+        }
+
+        /* Bottom form buttons */
+        #api form > .buttons {
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        #api form > .buttons #continue,
+        #api form > .buttons #cancel {
+            margin-top: 0;
+        }
+
+        /* Disabled continue button */
+        #api #continue[aria-disabled="true"],
+        #api #continue:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        #api #continue[aria-disabled="true"]:hover,
+        #api #continue:disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Verifying modal */
+        #api .verifying-modal {
+            display: none;
+        }
+
+        #api .verifying-modal[style*="block"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 0;
+            margin-top: 16px;
+        }
+
+        #api .verifying-modal #verifying_blurb {
+            color: #5a6a5a;
+            font-size: 14px;
+        }
+
+        /* Item level errors in attr list */
+        #api .attrEntry .error.itemLevel {
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+
+        #api .attrEntry .error.itemLevel:empty {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            main {
+                padding: 28px 24px;
+                border-radius: 0;
+            }
+
+            header {
+                margin-bottom: 20px;
+            }
+
+            header img {
+                max-width: 140px;
+            }
+
+            #api .heading h1 {
+                font-size: 24px;
+            }
+
+            #api .divider h2 {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            main {
+                padding: 24px 20px;
+            }
+
+            #api input[type="text"],
+            #api input[type="password"],
+            #api input[type="email"] {
+                padding: 12px 14px;
+            }
+
+            #api #next,
+            #api button[type="submit"] {
+                padding: 13px 20px;
+            }
+
+            #api .password-label {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+        }
+    </style>
+    <script>
+        (function() {
+            function applyCustomizations() {
+                // Change "User Details" heading to "Sign Up"
+                var heading = document.querySelector('#api .heading h1');
+                if (heading && heading.textContent.trim() === 'User Details') {
+                    heading.textContent = 'Sign up';
+                }
+
+                // Hide details until Continue is enabled
+                var api = document.getElementById('api');
+                if (!api) {
+                    return;
+                }
+                var continueButton = api.querySelector('#continue');
+                var isEnabled = continueButton && continueButton.getAttribute('aria-disabled') === 'false';
+                api.classList.toggle('details-hidden', !isEnabled);
+            }
+
+            function init() {
+                // Run immediately
+                applyCustomizations();
+
+                // Observe a stable ancestor since B2C may replace #api entirely
+                var observer = new MutationObserver(function() {
+                    applyCustomizations();
+                });
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true,
+                    attributeFilter: ['aria-disabled', 'disabled']
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://www.oliveoctagon.com/logo.svg" alt="Olive Octagon Logo">
+        </header>
+        <main>
+            <div id="api"></div>
+        </main>
+    </div>
+</body>
+</html>
