@@ -53,6 +53,24 @@
     - "Get ready for the first reporting date in 2026"
   button_text: "Learn More"
 
+- name: "UK Statistical Forms"
+  regulationFullName: "Bank of England Statistical Reporting"
+  slug: "boe-statistics"
+  url: "products/boe-statistics/"
+  price: "Free"
+  price_period: " in Beta"
+  status: "Beta Version"
+  color: "blue-500"
+  hover_color: "blue-600"
+  card_border: ""
+  image: /assets/images/bank-of-england-wide.jpg
+  image_alt_text: "A wide angle photo of the Bank of England with a blue sky"
+  features:
+    - "Updated to the final 1.3.1 taxonomy"
+    - "Full validations included"
+    - "Take part in the Spring 2026 UAT window"
+  button_text: "Learn More"
+
 - name: "IRRD Reporting"
   regulationFullName: "Insurance Recovery and Resolution Directive"
   slug: "irrd"
@@ -70,3 +88,22 @@
     - "Early access to the new templates"
     - "Provide feedback to EIOPA by 31&nbsp;October&nbsp;2025"
   button_text: "Learn More"
+
+- name: "Strong and Simple"
+  regulationFullName: "The simplified capital regime for Small Domestic Deposit Takers (SDDTs)"
+  slug: "strong-and-simple"
+  url: "products/strong-and-simple/"
+  price: "Free"
+  price_period: " in Beta"
+  status: "Beta Version"
+  color: "blue-500"
+  hover_color: "blue-600"
+  card_border: ""
+  image: /assets/images/chain.jpg
+  image_alt_text: "A black and white photo of a close-up of a section of a large metal chain"
+  features:
+    - "Test the draft reporting taxonomy"
+    - "Early access to the new templates"
+    - "Get ready to start reporting from 31&nbsp;December&nbsp;2026"
+  button_text: "Learn More"
+  

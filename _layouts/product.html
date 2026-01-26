@@ -238,6 +238,7 @@ layout: default
 </section>
 {% endif %}
 
+{% if page.screenshots %}
 <!-- Interface Screenshots -->
 <section class="py-16 bg-white">
     <div class="w-full mx-auto">
@@ -282,8 +283,10 @@ layout: default
         </div>
     </div>
 </section>
+{% endif %}
 
 <!-- FAQ Section -->
+ {% if page.faq %}
 <section class="py-16 bg-gray-100">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
@@ -309,8 +312,10 @@ layout: default
         </div>
     </div>
 </section>
+{% endif %}
 
 <!-- More detail section -->
+ {% if page.details %}
 <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
@@ -335,6 +340,7 @@ layout: default
         </div>
     </div>
 </section>
+{% endif %}
 
 <!-- Call to Action -->
 <section class="py-16 bg-brand-700">

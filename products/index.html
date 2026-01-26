@@ -27,7 +27,7 @@ description: Products page listing Olive Octagon products and services, both ava
   {% include all-products-cards.html %}
 
   <div class="prose max-w-none my-8">
-    <h2>Coming later in 2025...</h2>
+    <h2>Coming in 2026...</h2>
 
     <p>
       We are always adding to our range of available products, including different XBRL reporting taxonomies.
@@ -38,13 +38,13 @@ description: Products page listing Olive Octagon products and services, both ava
     </p>
 
     <p>
-      To give you an idea of what we're working on and what's coming soon, below are the products coming later in 2025.
+      To give you an idea of what we're working on and what's coming soon, below are the products coming in 2026.
     </p>
   </div>
 
   <div class="grid gap-x-6 gap-y-8" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))">
     
-    {% assign upcoming_product_names = "Solvency UK, FINREP / COREP, Bank of England Statistics, Solvency II" | split: ", " %}
+    {% assign upcoming_product_names = "Solvency UK, Solvency II, FINREP / COREP, FIRE" | split: ", " %}
     {% for product_name in upcoming_product_names -%}
       <article class="group h-full flex flex-col shadow-md hover:shadow-xl transition-shadow">
         <div class="overflow-hidden">
