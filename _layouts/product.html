@@ -546,7 +546,7 @@ layout: default
 
     // Image scroll navigation
     let currentImageIndex = 0;
-    const totalImages = {{ page.screenshots.images.size }};
+    const totalImages = {{ page.screenshots.images.size | default: 0  }};
 
     function scrollToImage(direction) {
         const container = document.getElementById('imageContainer');
