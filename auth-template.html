@@ -109,8 +109,7 @@ sitemap: false
             display: none;
         }
 
-        #api.details-hidden #continue,
-        #api.details-hidden #cancel {
+        #api.details-hidden #continue {
             display: none;
         }
 
@@ -224,7 +223,6 @@ sitemap: false
         }
 
         /* Cancel/Secondary buttons */
-        #api #cancel,
         #api .cancel,
         #api .sendNewCode,
         #api .changeClaims {
@@ -240,18 +238,38 @@ sitemap: false
             transition: background 0.15s, border-color 0.15s, color 0.15s;
         }
 
-        #api #cancel,
         #api .cancel {
             margin-top: 12px;
         }
 
-        #api #cancel:hover,
         #api .cancel:hover,
         #api .sendNewCode:hover,
         #api .changeClaims:hover {
             background: #f9fafb;
             border-color: #6b7280;
             color: #111827;
+        }
+
+        /* Cancel button as link (matching #createAccount styling) */
+        #api #cancel {
+            display: inline;
+            padding: 0;
+            margin-left: 6px;
+            background: transparent;
+            color: #383;
+            border: none;
+            border-radius: 0;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        #api #cancel:hover {
+            color: #252;
+            text-decoration: underline;
+            background: transparent;
         }
 
         /* Divider */
@@ -286,9 +304,9 @@ sitemap: false
             margin: 0;
         }
 
-        /* Create account section */
+        /* Create account / Sign in link section */
         #api .create {
-            margin-top: 0;
+            margin-top: 20px;
             padding-top: 0;
             border-top: none;
             text-align: center;
@@ -729,6 +747,36 @@ sitemap: false
                 var heading = document.querySelector('#api .heading h1');
                 if (heading && heading.textContent.trim() === 'User Details') {
                     heading.textContent = 'Sign up';
+                }
+
+                // Change Cancel button to "Already have an account? Sign in" link
+                var cancelButton = document.getElementById('cancel');
+                if (cancelButton && !cancelButton.dataset.customized) {
+                    cancelButton.dataset.customized = 'true';
+                    cancelButton.textContent = 'Sign in';
+
+                    // Override click to go back in browser history
+                    cancelButton.onclick = null;
+                    cancelButton.removeAttribute('formnovalidate');
+                    cancelButton.type = 'button';
+                    cancelButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
+                        history.back();
+                        return false;
+                    }, true);
+
+                    // Wrap in a structure matching the sign-in page's create account section
+                    var wrapper = document.createElement('div');
+                    wrapper.className = 'create';
+                    var p = document.createElement('p');
+                    p.appendChild(document.createTextNode('Already have an account?'));
+                    wrapper.appendChild(p);
+
+                    // Insert wrapper where button was, then move button into it
+                    cancelButton.parentNode.insertBefore(wrapper, cancelButton);
+                    p.appendChild(cancelButton);
                 }
 
                 // Hide details until Continue is enabled
