@@ -801,13 +801,29 @@ sitemap: false
                 api.classList.toggle('details-hidden', !isEnabled);
             }
 
+            var autoSignupDone = false;
+
+            function checkAutoSignup() {
+                if (autoSignupDone) return;
+                var params = new URLSearchParams(window.location.search);
+                if (params.get('option') === 'signup') {
+                    var signupLink = document.getElementById('createAccount');
+                    if (signupLink) {
+                        autoSignupDone = true;
+                        signupLink.click();
+                    }
+                }
+            }
+
             function init() {
                 // Run immediately
                 applyCustomizations();
+                checkAutoSignup();
 
                 // Observe a stable ancestor since B2C may replace #api entirely
                 var observer = new MutationObserver(function() {
                     applyCustomizations();
+                    checkAutoSignup();
                 });
                 observer.observe(document.body, {
                     childList: true,
