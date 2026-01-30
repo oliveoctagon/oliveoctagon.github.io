@@ -743,10 +743,10 @@ sitemap: false
     <script>
         (function() {
             function applyCustomizations() {
-                // Change "User Details" heading to "Sign Up"
+                // Change "User Details" heading
                 var heading = document.querySelector('#api .heading h1');
                 if (heading && heading.textContent.trim() === 'User Details') {
-                    heading.textContent = 'Sign up';
+                    heading.textContent = 'Create a new account';
                 }
 
                 // Change Cancel button to "Already have an account? Sign in" link
@@ -763,7 +763,19 @@ sitemap: false
                         e.preventDefault();
                         e.stopPropagation();
                         e.stopImmediatePropagation();
-                        history.back();
+                        // If option param is in URL, navigate to URL without it
+                        var params = new URLSearchParams(window.location.search);
+                        if (params.has('option')) {
+                            params.delete('option');
+                            var newUrl = window.location.pathname;
+                            var newSearch = params.toString();
+                            if (newSearch) {
+                                newUrl += '?' + newSearch;
+                            }
+                            window.location.href = newUrl;
+                        } else {
+                            history.back();
+                        }
                         return false;
                     }, true);
 
