@@ -60,4 +60,4 @@ Olive Octagon's [DORA reporting solution](https://www.oliveoctagon.com/products/
 
 Even if companies have an existing solution, Olive Octagon's package validation tool can be used as either an independent check or as the validation system for those companies producing their own reporting packages.
 
-And at €600, it's not a bad idea to have a back-up solution in place should you have any issues with your current reporting approach.
+Alternatively, consider us as your back-up solution should you have any issues with your current reporting approach.

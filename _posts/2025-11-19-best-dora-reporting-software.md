@@ -194,7 +194,7 @@ That means:
 
 ### 6. Simple, predictable pricing
 
-Olive Octagon charges a single annual licence per reporting entity. At just €600 per entity per year, with unlimited users and unlimited RoI report generations, this compares very favourably with other providers that have:
+Olive Octagon charges a single annual licence per reporting entity. With unlimited users and unlimited RoI report generations, this compares very favourably with other providers that have:
 
 - Per-user enterprise licences
 - Per-submission fees  
