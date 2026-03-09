@@ -3,7 +3,7 @@ layout: post
 title: "Best DORA Register of Information Reporting Software for 2026: Why Olive Octagon Wins"
 date: 2025-11-19
 image: /assets/images/padlock-medal.png
-author: Ben Joyce FIA
+author: Ben Joyce
 description: Looking for the best DORA reporting software for the 2026 Register of Information submission? Learn why an Excel-first, browser-based approach with Olive Octagon is hard to beat.
 
 ogtype: article

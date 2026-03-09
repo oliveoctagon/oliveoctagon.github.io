@@ -3,7 +3,7 @@ layout: post
 title: "IRRD Consultation and Draft Taxonomy: What you need to know, and how to get ready"
 date: 2025-08-04
 image: /assets/images/ducks.jpg
-author: Ben Joyce FIA
+author: Ben Joyce
 excerpt: The first public working draft of the Insurance Recovery and Resolution Directive (IRRD) XBRL taxonomy is out now with feedback requested by 31 October.
 description: Information about the new Insurance Recovery and Resolution Directive (IRRD) requirements.
 

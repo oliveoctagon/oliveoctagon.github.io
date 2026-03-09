@@ -3,7 +3,7 @@ layout: post
 title: "DORA Year End 2025 Reporting"
 date: 2025-11-07
 image: /assets/images/padlocks-snow.jpg
-author: Ben Joyce FIA
+author: Ben Joyce
 description: Things to think about when getting ready for DORA Reporting as at 31 December 2025
 
 ogtype: article

@@ -3,7 +3,7 @@ layout: post
 title: "AI Sucks (for Regulatory Reporting)"
 date: 2025-11-26
 image: /assets/images/gpus.jpg
-author: Ben Joyce FIA C.Act BA
+author: Ben Joyce
 description: Why you should stop using AI and learn to love databases and Excel.
 
 ogtype: article
