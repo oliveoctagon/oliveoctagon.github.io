@@ -1,14 +1,6 @@
 - name: "DORA Reporting"
-  order: 10
-  regulationFullName: "Digital Operational Resilience Act"
-  slug: "dora"
+  description: "Digital Operational Resilience Act"
   url: "products/dora/"
-  price: "€600"
-  price_period: "/year"
-  status: "Active Product"
-  color: "brand-green"
-  hover_color: "brand-dark"
-  card_border: "border-2 border-brand-green"
   image: /assets/images/golden-padlock.jpg
   image_alt_text: "A combination padlock resting on a keyboard with some chip and pin cards"
   features:
@@ -16,100 +8,59 @@
     - "Register of Information templates"
     - "Full report validation & conversion"
     - "Professional support"
-  button_text: "Learn More"
+  order: 10
 
 - name: "Lloyd's Schedule 3"
-  order: 60
-  regulationFullName: "Lloyd's of London Schedule 3 Data"
-  slug: "lloyds-schedule-3"
+  description: "Lloyd's of London Schedule 3 Data"
   url: "products/lloyds-schedule-3/"
-  price: "£1,100"
-  price_period: " /year"
-  status: "Active Product"
-  color: "purple-500"
-  hover_color: "purple-600"
-  card_border: ""
   image: /assets/images/lloyds.jpg
   image_alt_text: "A view of the Lloyd's of London building looking up from ground level with a blue sky behind"
   features:
     - "Schedule 3 data template to XBRL conversion"
     - "Use the Lloyd's Excel templates"
     - "Fast and secure conversion with no software installation required"
-  button_text: "Learn More"
+  order: 60
 
 - name: "PRA Liquidity"
-  order: 50
-  regulationFullName: "Bank of England Insurance Liquidity"
-  slug: "pra-liquidity"
+  description: "Bank of England Insurance Liquidity"
   url: "products/pra-liquidity/"
-  price: "Free"
-  price_period: " in Beta"
-  status: "Beta Version"
-  color: "purple-500"
-  hover_color: "purple-600"
-  card_border: ""
   image: /assets/images/money-pounds.jpg
   image_alt_text: "Various denomination UK Pound notes spread out across a flat surface"
   features:
     - "Liquidity reporting for large insurers"
     - "Early access to the new templates"
     - "Get ready for the first reporting date in 2026"
-  button_text: "Learn More"
+  order: 50
 
 - name: "UK Statistical Forms"
-  order: 30
-  regulationFullName: "Bank of England Statistical Reporting"
-  slug: "boe-statistics"
+  description: "Bank of England Statistical Reporting"
   url: "products/boe-statistics/"
-  price: "Free"
-  price_period: " in Beta"
-  status: "Beta Version"
-  color: "blue-500"
-  hover_color: "blue-600"
-  card_border: ""
   image: /assets/images/bank-of-england-wide.jpg
   image_alt_text: "A wide angle photo of the Bank of England with a blue sky"
   features:
     - "Updated to the final 1.3.1 taxonomy"
     - "Full validations included"
     - "Take part in the Spring 2026 UAT window"
-  button_text: "Learn More"
+  order: 30
 
 - name: "IRRD Reporting"
-  order: 40
-  regulationFullName: "Insurance Recovery and Resolution Directive"
-  slug: "irrd"
+  description: "Insurance Recovery and Resolution Directive"
   url: "products/irrd/"
-  price: "Free"
-  price_period: " in Beta"
-  status: "Beta Version"
-  color: "blue-500"
-  hover_color: "blue-600"
-  card_border: ""
   image: /assets/images/ducks.jpg
   image_alt_text: "A line of rubber ducks all facing the same direction on a blue background"
   features:
     - "Use the first draft reporting taxonomy"
     - "Early access to the new templates"
     - "Provide feedback to EIOPA by 31&nbsp;October&nbsp;2025"
-  button_text: "Learn More"
+  order: 40
 
 - name: "Strong and Simple"
-  order: 20
-  regulationFullName: "The simplified capital regime for Small Domestic Deposit Takers (SDDTs)"
-  slug: "strong-and-simple"
+  description: "The simplified capital regime for Small Domestic Deposit Takers (SDDTs)"
   url: "products/strong-and-simple/"
-  price: "Free"
-  price_period: " in Beta"
-  status: "Beta Version"
-  color: "blue-500"
-  hover_color: "blue-600"
-  card_border: ""
   image: /assets/images/chain.jpg
   image_alt_text: "A black and white photo of a close-up of a section of a large metal chain"
   features:
     - "Test the draft reporting taxonomy"
     - "Early access to the new templates"
     - "Get ready to start reporting from 31&nbsp;December&nbsp;2026"
-  button_text: "Learn More"
-  
+  order: 20

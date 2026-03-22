@@ -11,8 +11,8 @@
         <div class="p-8 flex flex-col flex-grow">
             <div class="text-center mb-8">
                 <h3 class="text-2xl font-bold text-gray-900">{{ product.name }}</h3>
-                {% if product.regulationFullName %}
-                <p class="text-md text-gray-600 mt-2">{{ product.regulationFullName }}</p>
+                {% if product.description %}
+                <p class="text-md text-gray-600 mt-2">{{ product.description }}</p>
                 {% endif %}
             </div>
             
@@ -28,7 +28,7 @@
             </ul>
             
             <a href="{{ product.url | relative_url }}" class="block w-full bg-brand-green text-white py-3 px-6 font-semibold hover:bg-brand-dark transition-colors text-center mt-auto" aria-label="Learn more about our {{ product.name }} product">
-                {{ product.button_text }}
+                Learn More
             </a>
         </div>
     </div>
