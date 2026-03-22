@@ -1,6 +1,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     {% assign limit_val = include.limit | default: site.data.products.size %}
-    {% for product in site.data.products limit: limit_val %}
+    {% assign sorted_products = site.data.products | sort: "order" %}
+    {% for product in sorted_products limit: limit_val %}
     <div class="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
         <div class="overflow-hidden">
             <a href="{{ product.url | relative_url }}" aria-label="Learn more about our {{ product.name }} product">

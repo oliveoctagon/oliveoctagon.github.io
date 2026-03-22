@@ -1,4 +1,5 @@
 - name: "DORA Reporting"
+  order: 10
   regulationFullName: "Digital Operational Resilience Act"
   slug: "dora"
   url: "products/dora/"
@@ -18,6 +19,7 @@
   button_text: "Learn More"
 
 - name: "Lloyd's Schedule 3"
+  order: 60
   regulationFullName: "Lloyd's of London Schedule 3 Data"
   slug: "lloyds-schedule-3"
   url: "products/lloyds-schedule-3/"
@@ -36,6 +38,7 @@
   button_text: "Learn More"
 
 - name: "PRA Liquidity"
+  order: 50
   regulationFullName: "Bank of England Insurance Liquidity"
   slug: "pra-liquidity"
   url: "products/pra-liquidity/"
@@ -54,6 +57,7 @@
   button_text: "Learn More"
 
 - name: "UK Statistical Forms"
+  order: 30
   regulationFullName: "Bank of England Statistical Reporting"
   slug: "boe-statistics"
   url: "products/boe-statistics/"
@@ -72,6 +76,7 @@
   button_text: "Learn More"
 
 - name: "IRRD Reporting"
+  order: 40
   regulationFullName: "Insurance Recovery and Resolution Directive"
   slug: "irrd"
   url: "products/irrd/"
@@ -90,6 +95,7 @@
   button_text: "Learn More"
 
 - name: "Strong and Simple"
+  order: 20
   regulationFullName: "The simplified capital regime for Small Domestic Deposit Takers (SDDTs)"
   slug: "strong-and-simple"
   url: "products/strong-and-simple/"
