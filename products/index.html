@@ -26,36 +26,4 @@ description: Products page listing Olive Octagon products and services, both ava
 
   {% include all-products-cards.html %}
 
-  <div class="prose max-w-none my-8">
-    <h2>Coming in 2026...</h2>
-
-    <p>
-      We are always adding to our range of available products, including different XBRL reporting taxonomies.
-    </p>
-
-    <p>
-      At Olive Octagon our primary goal is to make the end product as user-friendly as possible. This means that although we use automated process to interpret new taxonomies when they come out (as you'd expect any respectable software company to do), we add our own layer of value in order to achieve the goal of utmost usability. Therefore, we need to invest some effort in development and testing the first time we implement a particular XBRL taxonomy.
-    </p>
-
-    <p>
-      To give you an idea of what we're working on and what's coming soon, below are the products coming in 2026.
-    </p>
-  </div>
-
-  <div class="grid gap-x-6 gap-y-8" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))">
-    
-    {% assign upcoming_product_names = "Solvency UK, Solvency II, FINREP / COREP, FIRE" | split: ", " %}
-    {% for product_name in upcoming_product_names -%}
-      <article class="group h-full flex flex-col shadow-md hover:shadow-xl transition-shadow">
-        <div class="overflow-hidden">
-          <img src="{{ '/assets/images/coming-soon.jpg' | relative_url }}" alt="" class="aspect-7/3 object-cover transition-transform duration-300 group-hover:scale-110">
-        </div>
-        <div class="p-4 grow flex flex-col">
-          <h3 class="text-2xl mb-4 text-center">{{ product_name }}</h3>
-        </div>
-      </article>
-    {% endfor %}
-    
-  </div>
-
 </div>
