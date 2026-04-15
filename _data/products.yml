@@ -8,7 +8,7 @@
     - "Register of Information templates"
     - "Full report validation & conversion"
     - "Professional support"
-  order: 10
+  order: 30
 
 - name: "Lloyd's Schedule 3"
   description: "Lloyd's of London Schedule 3 Data"
@@ -19,7 +19,7 @@
     - "Schedule 3 data template to XBRL conversion"
     - "Use the Lloyd's Excel templates"
     - "Fast and secure conversion with no software installation required"
-  order: 60
+  order: 70
 
 - name: "PRA Liquidity"
   description: "Bank of England Insurance Liquidity"
@@ -28,8 +28,8 @@
   image_alt_text: "Various denomination UK Pound notes spread out across a flat surface"
   features:
     - "Liquidity reporting for large insurers"
-    - "Early access to the new templates"
-    - "Get ready for the first reporting date in 2026"
+    - "Fast and reliable for daily (T+1) reporting"
+    - "Get ready for reporting from 30&nbsp;September 2026"
   order: 50
 
 - name: "UK Statistical Forms"
@@ -41,7 +41,7 @@
     - "Updated to the final 1.3.1 taxonomy"
     - "Full validations included"
     - "Take part in the Spring 2026 UAT window"
-  order: 30
+  order: 40
 
 - name: "IRRD Reporting"
   description: "Insurance Recovery and Resolution Directive"
@@ -51,8 +51,8 @@
   features:
     - "Use the first draft reporting taxonomy"
     - "Early access to the new templates"
-    - "Provide feedback to EIOPA by 31&nbsp;October&nbsp;2025"
-  order: 40
+    - "Get ahead of the game before 2027"
+  order: 60
 
 - name: "Strong and Simple"
   description: "The simplified capital regime for Small Domestic Deposit Takers (SDDTs)"
@@ -60,7 +60,18 @@
   image: /assets/images/chain.jpg
   image_alt_text: "A black and white photo of a close-up of a section of a large metal chain"
   features:
-    - "Test the draft reporting taxonomy"
-    - "Early access to the new templates"
+    - "Easily generate fully validated XBRL files"
+    - "Straight-forward Excel templates"
     - "Get ready to start reporting from 31&nbsp;December&nbsp;2026"
   order: 20
+
+- name: "Solvency II / Solvency UK"
+  description: "Prudential reporting for insurance and reinsurance undertakings"
+  url: "products/solvency/"
+  image: /assets/images/uk-eu.jpg
+  image_alt_text: "A close-up of a British flag and an EU flag with a blue sky background"
+  features:
+    - "Updated for reporting from 2027 onwards"
+    - "Optimised for speed and ease of use"
+    - "Smooth transition from your existing provider"
+  order: 10
